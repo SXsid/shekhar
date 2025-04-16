@@ -1,16 +1,32 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
+import { Inter, JetBrains_Mono, Poppins } from "next/font/google";
 import "./globals.css";
+import { GeistSans } from 'geist/font/sans';
+import { GeistMono } from 'geist/font/mono';
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
-  subsets: ["latin"],
-});
 
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
-  subsets: ["latin"],
-});
+
+// Google fonts
+const inter = Inter({
+  subsets: ['latin'],
+  display: 'swap',
+  variable: '--font-inter',
+})
+
+const jetbrainsMono = JetBrains_Mono({
+  subsets: ['latin'],
+  weight: ['400', '700'],
+  display: 'swap',
+  variable: '--font-jetbrains',
+})
+
+const poppins = Poppins({
+  subsets: ['latin'],
+  weight: ['400', '500', '600', '700'],
+  display: 'swap',
+  variable: '--font-poppins',
+})
+
 
 export const metadata: Metadata = {
   title: "Shekhar - Full Stack Developer",
@@ -21,7 +37,7 @@ export const metadata: Metadata = {
     title: "Shekhar - Full Stack Developer Portfolio",
     description: "Full Stack Developer specializing in React, TypeScript, and modern web technologies.",
     type: "website",
-  }
+  },
 };
 
 export default function RootLayout({
@@ -32,7 +48,15 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+        className={`
+          ${GeistSans.variable} 
+          ${GeistMono.variable} 
+          ${inter.variable} 
+          ${jetbrainsMono.variable} 
+          ${poppins.variable}
+          antialiased 
+          text-neutral-200
+        `}
       >
         {children}
       </body>

@@ -34,7 +34,7 @@ export const FloatingDock = ({
       onMouseMove={(e) => mouseX.set(e.pageX)}
       onMouseLeave={() => mouseX.set(Infinity)}
       className={cn(
-        "mx-auto    flex h-16 lg:gap-4  gap-2 items-end  rounded-2xl bg-gray-50 dark:bg-neutral-900 px-4 pb-3",
+        "mx-auto    flex h-16 lg:gap-4  gap-2 items-end  rounded-2xl bg-neutral-900/90 px-4 pb-3 backdrop-blur-2xl ",
         className
       )}
     >
@@ -99,7 +99,7 @@ function IconContainer({
   const [hovered, setHovered] = useState(false);
 
   return (
-    <Link href={href}>
+    <Link href={href} target="_blank">
       <motion.div
         ref={ref}
         style={{ width, height }}
