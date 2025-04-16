@@ -1,4 +1,6 @@
 
+import HiringBanner from "@/components/Banner/Banner";
+import BlogSection from "@/components/BlogSection/BlogSection";
 import { FloatingDock } from "@/components/FloatingDoc";
 import Footer from "@/components/footer/Footer";
 import ProjectSection from "@/components/ProjectSection";
@@ -11,14 +13,16 @@ export default function Home() {
   return (
     <>
       <Spotlight />
+      <HiringBanner/>
 
       {/* Page wrapper */}
       <div className="relative flex flex-col min-h-screen">
 
         
-        <div className="flex-grow flex flex-col items-center pb-24">
+        <div className="flex-grow flex flex-col items-center pb-24 w-full max-w-[1024px] mx-auto">
         <div style={{ height: '1500px' }}></div>
           <ProjectSection />
+          <BlogSection/>
           
 
         </div>

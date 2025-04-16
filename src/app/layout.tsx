@@ -26,19 +26,31 @@ const poppins = Poppins({
   display: 'swap',
   variable: '--font-poppins',
 })
-
-
 export const metadata: Metadata = {
-  title: "Shekhar - Full Stack Developer",
-  description: "Full Stack Developer specializing in React, TypeScript, and modern web technologies. Explore my portfolio showcasing web applications, software projects, and professional experience in building scalable solutions.",
-  keywords: ["Full Stack Developer", "React", "TypeScript", "Web Development", "Software Engineer", "Portfolio"],
+  title: "Shekhar - Backend & Infrastructure Engineer",
+  description: "Full Stack Developer with a strong focus on backend engineering, infrastructure, and DevOps. Explore my portfolio showcasing scalable APIs, cloud-native systems, distributed architectures, and automation pipelines.",
+  keywords: [
+    "Backend Developer",
+    "DevOps Engineer",
+    "Infrastructure",
+    "Node.js",
+    "Go",
+    "Docker",
+    "Kubernetes",
+    "CI/CD",
+    "Cloud Engineering",
+    "API Development",
+    "System Design",
+    "Portfolio"
+  ],
   robots: "index, follow",
   openGraph: {
-    title: "Shekhar - Full Stack Developer Portfolio",
-    description: "Full Stack Developer specializing in React, TypeScript, and modern web technologies.",
+    title: "Shekhar - Backend & Infrastructure Portfolio",
+    description: "Backend-focused Full Stack Developer experienced in building scalable systems, APIs, and DevOps workflows.",
     type: "website",
   },
 };
+
 
 export default function RootLayout({
   children,

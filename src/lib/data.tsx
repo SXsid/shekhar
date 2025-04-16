@@ -2,6 +2,8 @@ import { FaGithub ,FaJava} from "react-icons/fa";
 import { FaXTwitter ,FaHashnode} from "react-icons/fa6";
 import { IoMailUnreadOutline } from "react-icons/io5";
 import { CiLinkedin } from "react-icons/ci";
+import { MdOutlineMonitor } from "react-icons/md";
+
 import {
   SiPython,
   SiTypescript,
@@ -29,6 +31,7 @@ import {
 } from "react-icons/si";
 
 import React from "react";
+import { IBlogCard } from "@/Types/type";
 
 export const docData: { title: string; icon: React.ReactNode; href: string }[] =
   [
@@ -174,3 +177,24 @@ export const docData: { title: string; icon: React.ReactNode; href: string }[] =
     },
   };
   
+
+
+  export const BlogData:IBlogCard[]=[
+    {
+      title:'Ever wonder how Linux-based images can run on your Windows machine?',
+      dateOfpublish:'24Jan 2025',
+      color:"#2496ED",
+      logo:<SiDocker className="w-4 h-8 z-2"  style={{ color: "#2496ED" ,width:"30px"}} />,
+      link:"https://dev.to/sid04/ever-wonder-how-linux-based-images-can-run-on-your-windows-machine-4480",
+      topic:"Docker Internal"
+    },
+    {
+      title:'How to enable two way binding in react',
+      dateOfpublish:'09Dec 2024',
+      color:"#DA70D6",
+      logo:<MdOutlineMonitor className="w-4 h-8 z-2"  style={{ color: "#DA70D6" ,width:"30px"}} />,
+      link:"https://dev.to/sid04/how-to-enable-two-way-binding-in-react-3im3",
+      topic:"React"
+    }
+
+  ]

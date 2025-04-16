@@ -9,3 +9,12 @@ export interface IProjectCard {
   liveLink: string;
   previewLink?: string;
 }
+
+export interface IBlogCard {
+  title: string;
+  topic: string;
+  color: string;
+  logo: React.ReactNode;
+  link: string;
+  dateOfpublish: string;
+}
