@@ -1,6 +1,7 @@
 
 import HiringBanner from "@/components/Banner/Banner";
 import BlogSection from "@/components/BlogSection/BlogSection";
+import ExpSection from "@/components/ExpSection/ExpSection";
 import { FloatingDock } from "@/components/FloatingDoc";
 import Footer from "@/components/footer/Footer";
 import ProjectSection from "@/components/ProjectSection";
@@ -21,6 +22,7 @@ export default function Home() {
         
         <div className="flex-grow flex flex-col items-center pb-24 w-full max-w-[1024px] mx-auto">
         <div style={{ height: '1500px' }}></div>
+          <ExpSection/>
           <ProjectSection />
           <BlogSection/>
           

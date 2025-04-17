@@ -7,7 +7,7 @@ import Intro from './Intro/Intro'
 
 function ProjectSection() {
   return (
-   <div className='flex flex-col w-[800px] overflow-hidden m-4 md:m-0'>
+   <div className='flex flex-col md:w-[800px]  mx-4 md:m-0'>
    
     
         <Intro title='Projects' desc="I've been actively engaged in a few side projects lately, exploring diverse technologies & ideas. Here’s a quick glimpse of my ongoing and completed projects.."/>

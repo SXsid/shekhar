@@ -31,7 +31,7 @@ import {
 } from "react-icons/si";
 
 import React from "react";
-import { IBlogCard } from "@/Types/type";
+import { IBlogCard, IExperienceCard } from "@/Types/type";
 
 export const docData: { title: string; icon: React.ReactNode; href: string }[] =
   [
@@ -197,4 +197,23 @@ export const docData: { title: string; icon: React.ReactNode; href: string }[] =
       topic:"React"
     }
 
+  ]
+
+  export const ExpData:IExperienceCard[]=[
+    {
+      positionTitle:'Backend Developer (contract)'
+      ,companyName:"LibraryMitra",
+      from:"Febuary 2025",
+      to:"April 2025",
+      imageURL:"https://ik.imagekit.io/librarymitra/librarymitra.png?tr=q-100,w-384,c-at_max",
+      bgcolor:"white"
+    },
+    {
+      positionTitle:'Frontend Developer (Intern)'
+      ,companyName:"Acegrade",
+      from:"September 2024",
+      to:"January 2025",
+      imageURL:"https://acegrade.in/_next/static/media/acegrade.9426eab7.svg",
+      bgcolor:"black"
+    }
   ]

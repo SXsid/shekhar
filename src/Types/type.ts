@@ -18,3 +18,12 @@ export interface IBlogCard {
   link: string;
   dateOfpublish: string;
 }
+
+export interface IExperienceCard {
+  positionTitle: string;
+  companyName: string;
+  from: string;
+  to: string;
+  imageURL: string;
+  bgcolor: string;
+}
