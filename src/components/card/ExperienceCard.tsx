@@ -1,16 +1,31 @@
 import React from 'react'
 import Image from 'next/image'
 import { IExperienceCard } from '@/Types/type'
+import { motion } from 'motion/react'
 
-// Add isFirst and isLast props to handle special styling for first and last cards
 function ExperienceCard({ positionTitle, companyName, from, to, imageURL, isFirst, isLast ,bgcolor}:IExperienceCard&{isFirst:boolean,isLast:boolean}) {
   return (
-    <div className="flex py-4 pl-10 pr-2 sm:pl-12 relative">
-      {/* Card content */}
-      <div className="flex  sm:flex-row w-full rounded-lg lg:px-4 py-4 shadow-sm">
-        {/* Image */}
+    <motion.div
+    initial={{
+      x:-30,
+      opacity:0,
+      filter:"blur(3px)"
+    }}
+    whileInView={{
+      x:0,
+      opacity:1,
+      filter:"blur(0px)"
+    }}
+    viewport={{
+      once:true
+    }}
+    
+    className="flex py-4 pl-10 pr-2 sm:pl-12 relative">
+      
+      <div className="flex  sm:flex-row w-full rounded-lg lg:px-4 py-4 ">
+       
         <div className=" lg:mr-4  mr-2 mb-3 sm:mb-0">
-          <div className="w-12 h-12 rounded-full overflow-hidde" style={{backgroundColor:bgcolor}}>
+          <div className="w-12 h-12 rounded-full overflow-hidden" style={{backgroundColor:bgcolor}}>
             {imageURL && (
               <Image 
                 src={imageURL} 
@@ -36,7 +51,7 @@ function ExperienceCard({ positionTitle, companyName, from, to, imageURL, isFirs
           </div>
         </div>
       </div>
-    </div>
+    </motion.div>
   )
 }
 

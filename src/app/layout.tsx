@@ -41,14 +41,26 @@ export const metadata: Metadata = {
     "Cloud Engineering",
     "API Development",
     "System Design",
-    "Portfolio"
+    
   ],
   robots: "index, follow",
   openGraph: {
     title: "Shekhar - Backend & Infrastructure Portfolio",
     description: "Backend-focused Full Stack Developer experienced in building scalable systems, APIs, and DevOps workflows.",
     type: "website",
+    images: [
+      {
+        url: "/profile.ico", // Correct relative path
+        width: 800,
+        height: 600,
+        alt: "shekhar",
+      },
+    ],
   },
+  icons: {
+    icon: "/favicon.ico", // Use absolute path from public directory
+  },
+
 };
 
 

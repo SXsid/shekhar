@@ -27,3 +27,8 @@ export interface IExperienceCard {
   imageURL: string;
   bgcolor: string;
 }
+
+export interface ISkillCard {
+  name: string;
+  items: string[];
+}

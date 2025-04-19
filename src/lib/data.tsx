@@ -31,7 +31,7 @@ import {
 } from "react-icons/si";
 
 import React from "react";
-import { IBlogCard, IExperienceCard } from "@/Types/type";
+import { IBlogCard, IExperienceCard, ISkillCard } from "@/Types/type";
 
 export const docData: { title: string; icon: React.ReactNode; href: string }[] =
   [
@@ -215,5 +215,39 @@ export const docData: { title: string; icon: React.ReactNode; href: string }[] =
       to:"January 2025",
       imageURL:"https://acegrade.in/_next/static/media/acegrade.9426eab7.svg",
       bgcolor:"black"
+    }
+  ]
+
+
+
+
+  export const skillData:ISkillCard[]=[
+    {
+      name:"Languages",
+      items:["Typescript","Go","Python","Java","Sql"]
+
+    },
+    {
+      name:"Backend",
+      items:["Express.js","Flask","Hono.js"]
+
+    },
+    {
+      name:"Databases",
+      items:["PostgreSQL","Redis","MongoDB","Firestore","SQLite"]
+
+    },
+    {
+      name:"DevOps & Cloud",
+      items:["Docker","Kubernetes","AWS","Terraform","Jenkins"]
+
+    },
+    {
+      name:"Frontend",
+      items:['React','Next.js','Tailwind CSS','Framer Motion','Redux','Tanstack Query']
+    },
+    {
+      name:'Others',
+      items:['Git','Prisma','gRPC','tRPC']
     }
   ]

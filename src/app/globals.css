@@ -16,7 +16,7 @@
   --font-code: var(--font-jetbrains);
   --font-body: var(--font-inter);
   --font-custom: var(--font-my-font);
-  --animate-spotlight: spotlight 2s ease 0.75s 1 forwards;
+  --animate-spotlight: spotlight 0.8s ease 0.75s 1 forwards;
 }
 
  
