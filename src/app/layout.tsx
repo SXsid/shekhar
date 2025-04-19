@@ -45,7 +45,7 @@ export const metadata: Metadata = {
   ],
   robots: "index, follow",
   openGraph: {
-    title: "Shekhar - Backend & Infrastructure Portfolio",
+    title: "Shekhar - Backend & Infrastructure Engineer`",
     description: "Backend-focused Full Stack Developer experienced in building scalable systems, APIs, and DevOps workflows.",
     type: "website",
     images: [
