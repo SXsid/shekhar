@@ -4,7 +4,7 @@ import "./globals.css";
 import { GeistSans } from 'geist/font/sans';
 import { GeistMono } from 'geist/font/mono';
 
-
+import { Analytics } from "@vercel/analytics/react"
 
 // Google fonts
 const inter = Inter({
@@ -83,6 +83,7 @@ export default function RootLayout({
         `}
       >
         {children}
+        <Analytics />
       </body>
     </html>
   );
