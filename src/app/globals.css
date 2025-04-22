@@ -6,6 +6,10 @@
 
 
 }
+*::selection {
+  background: #cecdc8; 
+  color: #000;         
+}
 
 @theme inline {
   --color-background: var(--background);

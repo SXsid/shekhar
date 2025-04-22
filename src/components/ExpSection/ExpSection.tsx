@@ -32,7 +32,7 @@ function ExpSection() {
       duration: 0.7
     }}
     
-    className='flex flex-col md:w-[800px] mx-4 lg:mx-0 mb-10'>
+    className='flex flex-col md:w-[800px] mx-4 lg:mx-0 mb-5'>
         <Intro title='Experience' desc='A breif about my work experiences where I have worked at and where I am currently working at.
 
 '/>

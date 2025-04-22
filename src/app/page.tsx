@@ -5,6 +5,7 @@ import BlogSection from "@/components/BlogSection/BlogSection";
 import ExpSection from "@/components/ExpSection/ExpSection";
 import { FloatingDock } from "@/components/FloatingDoc";
 import Footer from "@/components/footer/Footer";
+import Git from "@/components/GithhubSection/Git";
 import Hero from "@/components/HeroSection/Hero";
 import ProjectSection from "@/components/ProjectSection";
 import Qoute from "@/components/Qoute";
@@ -26,6 +27,7 @@ export default function Home() {
           <Hero/>
           <About/>
           <ExpSection/>
+          <Git/>
           <ProjectSection />
           <BlogSection/>
           <SkillSection/>
