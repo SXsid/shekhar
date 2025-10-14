@@ -6,7 +6,7 @@ export interface IProjectCard {
     icon: React.ReactNode;
   }[];
   gitHubLink: string;
-  liveLink: string;
+  liveLink?: string;
   previewLink?: string;
 }
 
@@ -21,7 +21,7 @@ export interface IBlogCard {
 
 export interface IExperienceCard {
   positionTitle: string;
-  companyName: string;
+  companyName?: string;
   from: string;
   to: string;
   imageURL: string;

@@ -3,7 +3,7 @@
  * Desktop navbar is better positioned at the bottom
  * Mobile navbar is better positioned at bottom right.
  **/
-"use client"
+"use client";
 import { cn } from "../lib/util";
 import { IconLayoutNavbarCollapse } from "@tabler/icons-react";
 import {
@@ -16,10 +16,6 @@ import {
 } from "motion/react";
 import Link from "next/link";
 import { useRef, useState } from "react";
-
-
-
-
 
 export const FloatingDock = ({
   items,
@@ -35,7 +31,7 @@ export const FloatingDock = ({
       onMouseLeave={() => mouseX.set(Infinity)}
       className={cn(
         "mx-auto    flex h-16 lg:gap-4  gap-2 items-end  rounded-2xl bg-neutral-900/90 px-4 pb-3 backdrop-blur-2xl ",
-        className
+        className,
       )}
     >
       {items.map((item) => (
@@ -71,7 +67,7 @@ function IconContainer({
   let heightTransformIcon = useTransform(
     distance,
     [-150, 0, 150],
-    [20, 40, 20]
+    [20, 40, 20],
   );
 
   let width = useSpring(widthTransform, {
@@ -105,7 +101,7 @@ function IconContainer({
         style={{ width, height }}
         onMouseEnter={() => setHovered(true)}
         onMouseLeave={() => setHovered(false)}
-        className="aspect-square rounded-full bg-gray-200 dark:bg-neutral-800 flex items-center justify-center relative"
+        className="aspect-square rounded-full  bg-neutral-800 flex items-center justify-center relative"
       >
         <AnimatePresence>
           {hovered && (
@@ -113,7 +109,7 @@ function IconContainer({
               initial={{ opacity: 0, y: 10, x: "-50%" }}
               animate={{ opacity: 1, y: 0, x: "-50%" }}
               exit={{ opacity: 0, y: 2, x: "-50%" }}
-              className="px-2 py-0.5 whitespace-pre rounded-md bg-gray-100 border dark:bg-neutral-800 dark:border-neutral-900 dark:text-white border-gray-200 text-neutral-700 absolute left-1/2 -translate-x-1/2 -top-8 w-fit text-xs"
+              className="px-2 py-0.5 whitespace-pre rounded-md  border bg-neutral-800 border-neutral-900 text-white border-gray-200 text-neutral-700 absolute left-1/2 -translate-x-1/2 -top-8 w-fit text-xs"
             >
               {title}
             </motion.div>

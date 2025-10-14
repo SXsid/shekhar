@@ -3,7 +3,12 @@ import type { NextConfig } from "next";
 const nextConfig: NextConfig = {
   /* config options here */
   images: {
-    domains: ["ik.imagekit.io", "acegrade.in", "i.pinimg.com"],
+    domains: [
+      "images.yourstory.com",
+      "ik.imagekit.io",
+      "acegrade.in",
+      "i.pinimg.com",
+    ],
   },
 };
 

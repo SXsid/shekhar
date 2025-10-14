@@ -1,4 +1,4 @@
-import React from 'react';
+import React from "react";
 
 const HiringBanner = () => {
   return (
@@ -7,7 +7,7 @@ const HiringBanner = () => {
         <span>Available for Hir</span>
         <span className="relative">
           e
-          <span className="absolute -top-0 -right-2 w-3 h-3 rounded-full bg-red-600 animate-pulse"></span>
+          <span className="absolute -top-0 -right-2 w-4 h-4 rounded-full bg-green-500 animate-pulse"></span>
         </span>
       </div>
     </div>

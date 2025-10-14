@@ -1,34 +1,36 @@
 import type { Metadata } from "next";
+import { Spotlight } from "@/components/Spotlight";
 import { Inter, JetBrains_Mono, Poppins } from "next/font/google";
 import "./globals.css";
-import { GeistSans } from 'geist/font/sans';
-import { GeistMono } from 'geist/font/mono';
+import { GeistSans } from "geist/font/sans";
+import { GeistMono } from "geist/font/mono";
 
-import { Analytics } from "@vercel/analytics/react"
+import { Analytics } from "@vercel/analytics/react";
 
 // Google fonts
 const inter = Inter({
-  subsets: ['latin'],
-  display: 'swap',
-  variable: '--font-inter',
-})
+  subsets: ["latin"],
+  display: "swap",
+  variable: "--font-inter",
+});
 
 const jetbrainsMono = JetBrains_Mono({
-  subsets: ['latin'],
-  weight: ['400', '700'],
-  display: 'swap',
-  variable: '--font-jetbrains',
-})
+  subsets: ["latin"],
+  weight: ["400", "700"],
+  display: "swap",
+  variable: "--font-jetbrains",
+});
 
 const poppins = Poppins({
-  subsets: ['latin'],
-  weight: ['400', '500', '600', '700'],
-  display: 'swap',
-  variable: '--font-poppins',
-})
+  subsets: ["latin"],
+  weight: ["400", "500", "600", "700"],
+  display: "swap",
+  variable: "--font-poppins",
+});
 export const metadata: Metadata = {
   title: "Shekhar - Backend & Infrastructure Engineer",
-  description: "Full Stack Developer with a strong focus on backend engineering, infrastructure, and DevOps. Explore my portfolio showcasing scalable APIs, cloud-native systems, distributed architectures, and automation pipelines.",
+  description:
+    "Full Stack Developer with a strong focus on backend engineering, infrastructure, and DevOps. Explore my portfolio showcasing scalable APIs, cloud-native systems, distributed architectures, and automation pipelines.",
   keywords: [
     "Backend Developer",
     "DevOps Engineer",
@@ -41,12 +43,12 @@ export const metadata: Metadata = {
     "Cloud Engineering",
     "API Development",
     "System Design",
-    
   ],
   robots: "index, follow",
   openGraph: {
     title: "Shekhar - Backend & Infrastructure Engineer`",
-    description: "Backend-focused Full Stack Developer experienced in building scalable systems, APIs, and DevOps workflows.",
+    description:
+      "Backend-focused Full Stack Developer experienced in building scalable systems, APIs, and DevOps workflows.",
     type: "website",
     images: [
       {
@@ -60,9 +62,7 @@ export const metadata: Metadata = {
   icons: {
     icon: "/favicon.ico", // Use absolute path from public directory
   },
-
 };
-
 
 export default function RootLayout({
   children,
@@ -82,9 +82,11 @@ export default function RootLayout({
           text-neutral-200
         `}
       >
+        <Spotlight />
         {children}
         <Analytics />
       </body>
     </html>
   );
 }
+

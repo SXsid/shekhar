@@ -3,7 +3,30 @@ import { TechstackData } from "./data";
 
 export const ProjectStaticData: IProjectCard[] = [
   {
-    name: "Paint2-3d",
+    name: "Gomon",
+    desc: "A Saas which let you crate 3d model from you canvas creativity ",
+    gitHubLink: "https://github.com/SXsid/paint2-3d",
+    Techstack: [
+      TechstackData.python,
+      TechstackData.opencv,
+      TechstackData.react,
+      TechstackData.typescript,
+    ],
+  },
+  {
+    name: "VibeKrit",
+    desc: "A Saas which let you the user crate a static app in a instant like lovale ,v0 ",
+    liveLink: "https://paint2-3d.shekharx.in/",
+    gitHubLink: "https://github.com/SXsid/paint2-3d",
+    Techstack: [
+      TechstackData.python,
+      TechstackData.opencv,
+      TechstackData.react,
+      TechstackData.typescript,
+    ],
+  },
+  {
+    name: "Gomon",
     desc: "A Saas which let you crate 3d model from you canvas creativity ",
     liveLink: "https://paint2-3d.shekharx.in/",
     gitHubLink: "https://github.com/SXsid/paint2-3d",
