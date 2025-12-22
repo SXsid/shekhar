@@ -60,7 +60,7 @@ export const metadata: Metadata = {
     ],
   },
   icons: {
-    icon: "/favicon.ico", // Use absolute path from public directory
+    icon: "/profile.ico", // Use absolute path from public directory
   },
 };
 
@@ -89,4 +89,3 @@ export default function RootLayout({
     </html>
   );
 }
-

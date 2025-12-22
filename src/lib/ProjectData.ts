@@ -3,39 +3,34 @@ import { TechstackData } from "./data";
 
 export const ProjectStaticData: IProjectCard[] = [
   {
-    name: "Gomon",
-    desc: "A Saas which let you crate 3d model from you canvas creativity ",
-    gitHubLink: "https://github.com/SXsid/paint2-3d",
-    Techstack: [
-      TechstackData.python,
-      TechstackData.opencv,
-      TechstackData.react,
-      TechstackData.typescript,
-    ],
+    name: "KitsuDB(working)",
+    desc: "An in-memory cache database written in Go that implements the Redis RESP protocol, using an event-loop architecture for concurrency,",
+    gitHubLink: "https://github.com/SXsid/KitsuDB",
+    Techstack: [TechstackData.go, TechstackData.c],
   },
   {
-    name: "VibeKrit",
-    desc: "A Saas which let you the user crate a static app in a instant like lovale ,v0 ",
-    liveLink: "https://paint2-3d.shekharx.in/",
-    gitHubLink: "https://github.com/SXsid/paint2-3d",
-    Techstack: [
-      TechstackData.python,
-      TechstackData.opencv,
-      TechstackData.react,
-      TechstackData.typescript,
-    ],
+    name: "RootLessRaft(working)",
+    desc: "A naive implementation of a Docker-like container in go on linux.",
+    gitHubLink: "https://github.com/SXsid/Rootless-Raft",
+    Techstack: [TechstackData.go, TechstackData.c],
   },
   {
-    name: "Gomon",
-    desc: "A Saas which let you crate 3d model from you canvas creativity ",
-    liveLink: "https://paint2-3d.shekharx.in/",
-    gitHubLink: "https://github.com/SXsid/paint2-3d",
-    Techstack: [
-      TechstackData.python,
-      TechstackData.opencv,
-      TechstackData.react,
-      TechstackData.typescript,
-    ],
+    name: "Mirrorly(working)",
+    desc: "Mirrorly is an extension that lets you see yourself in every outfit online. AI-powered virtual try-ons for your favorite stores.Resources",
+    gitHubLink: "https://github.com/SXsid/Mirrorly",
+    Techstack: [TechstackData.Javascript, TechstackData.python],
+  },
+  {
+    name: "GOMON",
+    desc: "gomon – A minimal Go-powered nodemon alternative. Watches your files, rebuilds, and reruns your app on change. Fast, focused, and just enough.",
+    gitHubLink: "https://github.com/SXsid/gomon",
+    Techstack: [TechstackData.go],
+  },
+  {
+    name: "GLSP",
+    desc: "glsp is a basic Go-based implementation of the Language Server Protocol .",
+    gitHubLink: "https://github.com/SXsid/glsp",
+    Techstack: [TechstackData.go],
   },
   {
     name: "MoneyBuddy",

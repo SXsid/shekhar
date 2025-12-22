@@ -14,7 +14,7 @@ function Hero() {
       <div className=" left-6 md:w-24 md:h-24 w-16 h-16">
         <Image
           src={
-            "https://i.pinimg.com/736x/1b/56/11/1b5611ea543ac6762069dbca96167711.jpg"
+            "https://i.ibb.co/spWbbdZM/Screenshot-from-2025-12-23-03-19-13.png"
           }
           width={120}
           height={120}
@@ -80,4 +80,3 @@ function Hero() {
 }
 
 export default Hero;
-

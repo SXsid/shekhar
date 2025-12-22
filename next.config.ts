@@ -8,6 +8,7 @@ const nextConfig: NextConfig = {
       "ik.imagekit.io",
       "acegrade.in",
       "i.pinimg.com",
+      "i.ibb.co",
     ],
   },
 };
