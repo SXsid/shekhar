@@ -31,28 +31,28 @@ function Quote() {
   }, [isTyping, index]);
 
   return (
-   <div className="border border-dashed border-neutral-600 md:w-[800px] w-full md:h-[180px] h-[100px] mt-10 relative">
-    <div className="absolute top-4 left-4 z-10 w-4 h-4 bg-neutral-950 rounded-full flex justify-center items-center">
+   <div className="border border-dashed border-neutral-300 md:w-[800px] w-full md:h-[180px] h-[100px] mt-10 relative bg-white/40">
+    <div className="absolute top-4 left-4 z-10 w-4 h-4 bg-white rounded-full flex justify-center items-center shadow-sm">
         <div className="bg-green-500 rounded-full w-1 h-1"></div>
     </div>
-      <div className="absolute top-4  right-4  z-10 w-4 h-4 bg-neutral-950 rounded-full flex justify-center items-center">
+      <div className="absolute top-4 right-4 z-10 w-4 h-4 bg-white rounded-full flex justify-center items-center shadow-sm">
         <div className="bg-green-500 rounded-full w-1 h-1"></div>
     </div>
-      <div className="absolute bottom-4 left-4 z-10 w-4 h-4 bg-neutral-950 rounded-full flex justify-center items-center">
+      <div className="absolute bottom-4 left-4 z-10 w-4 h-4 bg-white rounded-full flex justify-center items-center shadow-sm">
         <div className="bg-green-500 rounded-full w-1 h-1"></div>
     </div>
-      <div className="absolute bottom-4 right-4 z-10 w-4 h-4 bg-neutral-950 rounded-full flex justify-center items-center">
+      <div className="absolute bottom-4 right-4 z-10 w-4 h-4 bg-white rounded-full flex justify-center items-center shadow-sm">
         <div className="bg-green-500 rounded-full w-1 h-1"></div>
     </div>
       
       {/* Border lines */}
-      <div className="absolute top-5 left-0 right-0 h-px bg-neutral-700"></div>
-      <div className="absolute bottom-5 left-0 right-0 h-px bg-neutral-700"></div>
-      <div className="absolute left-5 top-0 bottom-0 w-px bg-neutral-700"></div>
-      <div className="absolute right-5 top-0 bottom-0 w-px bg-neutral-700"></div>
+      <div className="absolute top-5 left-0 right-0 h-px bg-neutral-300"></div>
+      <div className="absolute bottom-5 left-0 right-0 h-px bg-neutral-300"></div>
+      <div className="absolute left-5 top-0 bottom-0 w-px bg-neutral-300"></div>
+      <div className="absolute right-5 top-0 bottom-0 w-px bg-neutral-300"></div>
     
-     <div className=" w-full h-full  border-neutral-800/80 flex items-center justify-center">
-        <div className="md:text-2xl font-display text-neutral-400 text-xs font-extralight md:font-normal">
+     <div className=" w-full h-full  border-neutral-300/80 flex items-center justify-center">
+        <div className="md:text-2xl font-display text-[#333333] text-xs font-medium">
     ❝
       <span className="mx-2">{currText}</span>❞
     

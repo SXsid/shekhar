@@ -1,0 +1,31 @@
+---
+import { ClientRouter } from 'astro:transitions';
+import '@/styles/globals.css';
+import { Spotlight } from '@/components/Spotlight';
+import MusicPlayer from '@/components/MusicPlayer';
+// In a real app we might use @fontsource, but standard font links are fast and robust.
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="description" content="Backend-focused Full Stack Developer experienced in building scalable systems, APIs, and DevOps workflows." />
+    <meta name="viewport" content="width=device-width" />
+    <link rel="icon" type="image/x-icon" href="/favicon.ico" />
+    <meta name="generator" content={Astro.generator} />
+    <title>Shekhar - Backend & Infrastructure Engineer</title>
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;700&family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
+    <ClientRouter />
+  </head>
+  <body class="antialiased text-[#333333]">
+    <Spotlight client:load />
+    <MusicPlayer client:only="react" />
+    <slot />
+  </body>
+</html>

@@ -1,5 +1,4 @@
 import React from "react";
-import Image from "next/image";
 import { IExperienceCard } from "@/Types/type";
 import { motion } from "motion/react";
 
@@ -37,7 +36,7 @@ function ExperienceCard({
             style={{ backgroundColor: bgcolor }}
           >
             {imageURL && (
-              <Image
+              <img
                 src={imageURL}
                 alt={companyName ? companyName : "freelance"}
                 width={48}
@@ -51,12 +50,12 @@ function ExperienceCard({
         {/* Content */}
         <div className=" lg:flex lg:justify-between lg:w-[80%]">
           <div>
-            <h3 className="text-lg font-light font-body   ">{positionTitle}</h3>
-            <h4 className="text-md text-neutral-400 font-sans font-light">
+            <h3 className="text-lg font-medium font-body text-[#333333]">{positionTitle}</h3>
+            <h4 className="text-md text-neutral-600 font-sans font-medium">
               {companyName}
             </h4>
           </div>
-          <div className="text-sm hidden lg:block text-gray-500 dark:text-gray-400 mt-1">
+          <div className="text-sm hidden lg:block text-neutral-500 mt-1 font-mono">
             <span>{from}</span>
             <span className="mx-2">—</span>
             <span>{to}</span>

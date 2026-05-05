@@ -4,22 +4,18 @@ import React from 'react';
 function Git() {
     const gradientTheme = {
         light: [
-            '#1a1a1a', // neutral-950 (darkest)
-        
-            '#999999', // neutral-500
-            '#b3b3b3', // neutral-400
-          
-            '#e6e6e6', // neutral-200
-            '#ffffff', // pure white
+            '#e8e4db', // empty paper
+            '#d1c7b7', // light tan
+            '#a99a86', // medium brown
+            '#786854', // dark brown
+            '#473a2b', // darkest ink
         ],
         dark: [
-            '#333333', // neutral-900
-            
-            '#999999', // neutral-500
-            '#b3b3b3', // neutral-400
-            
-            '#f2f2f2', // very light gray
-            '#ffffff', // pure white
+            '#e6e6e6', // empty
+            '#cccccc',
+            '#999999',
+            '#666666',
+            '#333333', // full
         ],
     };
 

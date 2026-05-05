@@ -40,7 +40,7 @@ function SkillType({ name, items, index }: ISkillCard & { index: number }) {
       <div className="flex gap-2">
         {items.map((item, key) => (
           <div
-            className="bg-transparent border text-neutral-400  font-extralight text-md border-neutral-800 px-2 rounded-md"
+            className="bg-white border text-neutral-600 font-medium text-md border-neutral-300 px-2 rounded-md shadow-sm"
             key={key}
           >
             {item}
@@ -55,12 +55,12 @@ function SkillforSmallScrren() {
   const data = ["Backend", "AI", "Cloud", "Frontend"];
   return (
     <div className=" flex-col  mt-6 mx-4 w-auto flex md:hidden  ">
-      <h3 className="font-display text-white">What can i do </h3>
+      <h3 className="font-display text-[#333333] font-semibold mb-2">What can i do </h3>
       <div className="flex flex-wrap gap-3 ">
         {data.map((value, i) => (
           <span
             key={i}
-            className="bg-transparent border text-neutral-400  font-extralight text-md border-neutral-800 px-4 rounded-md"
+            className="bg-white border text-neutral-600 font-medium text-md border-neutral-300 px-4 py-1 rounded-md shadow-sm"
           >
             {value}
           </span>

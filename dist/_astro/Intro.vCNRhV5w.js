@@ -1,0 +1,1 @@
+import{j as t}from"./jsx-runtime.EKYJJIwR.js";function r({title:e,desc:n}){return t.jsxs(t.Fragment,{children:[t.jsx("h2",{className:"font-display mt-10 text-2xl font-bold text-center text-[#333333]",children:e}),t.jsx("p",{className:"font-body text-neutral-600 mb-4 mt-2 font-light text-md max-w-2xl text-center mx-auto",children:n})]})}export{r as default};

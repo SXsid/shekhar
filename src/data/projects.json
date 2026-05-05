@@ -1,0 +1,61 @@
+[
+  {
+    "name": "KitsuDB",
+    "desc": "An in-memory cache database written in Go that implements the Redis RESP protocol, using an event-loop architecture for concurrency.",
+    "gitHubLink": "https://github.com/SXsid/KitsuDB",
+    "isTopProject": true,
+    "techstack": ["go", "c"]
+  },
+  {
+    "name": "RootLessRaft",
+    "desc": "A naive implementation of a Docker-like container in go on linux.",
+    "gitHubLink": "https://github.com/SXsid/Rootless-Raft",
+    "isTopProject": true,
+    "techstack": ["go", "c"]
+  },
+  {
+    "name": "MoneyBuddy",
+    "desc": "Developed a Dockerized financial app with PostgreSQL for secure, fast transaction tracking and interactive spending insights.",
+    "liveLink": "https://moneybuddy.shekharx.in/dashbord",
+    "gitHubLink": "https://github.com/SXsid/MoneyBuddy",
+    "isTopProject": true,
+    "techstack": ["nextjs", "typescript", "postgresql", "docker"]
+  },
+  {
+    "name": "Online-Pal",
+    "desc": "Built a real-time chat app using WebSockets and Redis Pub/Sub for low-latency messaging and scalable performance.",
+    "liveLink": "https://onlinepal.shekharx.in/",
+    "gitHubLink": "https://github.com/SXsid/Online-Pal",
+    "isTopProject": false,
+    "techstack": ["socketio", "redis", "typescript", "nodejs"]
+  },
+  {
+    "name": "Crafter.ai",
+    "desc": "Built a responsive article publishing platform with Redux-based state management and AI-assisted content suggestions.",
+    "liveLink": "https://carfterai.shekharx.in/",
+    "gitHubLink": "https://github.com/SXsid/ArticleCrafter",
+    "isTopProject": false,
+    "techstack": ["react", "framermotion", "appwrite", "Javascript"]
+  },
+  {
+    "name": "Mirrorly",
+    "desc": "Mirrorly is an extension that lets you see yourself in every outfit online. AI-powered virtual try-ons.",
+    "gitHubLink": "https://github.com/SXsid/Mirrorly",
+    "isTopProject": false,
+    "techstack": ["Javascript", "python"]
+  },
+  {
+    "name": "GOMON",
+    "desc": "gomon – A minimal Go-powered nodemon alternative. Watches your files, rebuilds, and reruns your app on change.",
+    "gitHubLink": "https://github.com/SXsid/gomon",
+    "isTopProject": false,
+    "techstack": ["go"]
+  },
+  {
+    "name": "GLSP",
+    "desc": "glsp is a basic Go-based implementation of the Language Server Protocol.",
+    "gitHubLink": "https://github.com/SXsid/glsp",
+    "isTopProject": false,
+    "techstack": ["go"]
+  }
+]

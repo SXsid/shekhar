@@ -1,20 +1,19 @@
 import React from "react";
-import Link from "next/link";
 
 function About() {
   return (
-    <div className="md:w-[800px] ">
-      <h2 className="   font-display text-lg text-white mb-4">About Me</h2>
+    <div className="md:w-[800px] mt-10 md:mt-16 mx-6 md:mx-0">
+      <h2 className="font-display text-2xl font-bold text-[#333333] mb-6 border-b-2 border-neutral-200 pb-2 w-fit">Summary</h2>
 
-      <div className="text-neutral-400 font-display md:font-normal font-light md:text-lg text-sm flex flex-col gap-4 md:gap-6 flex-wrap mb-12">
-        <p>I'm Sudhanshu Shekhar, a Software Engineer from india.</p>
-        <p>I build scalable, engaging, and accessible digital experiences.</p>
+      <div className="text-[#333333] font-body md:text-lg text-base leading-relaxed flex flex-col gap-5 mb-16">
         <p>
-          I'm currently working as a{" "}
-          <span className="text-orange-600 underline">
-            freelance backend developer{" "}
-          </span>
-          , building and deploying high-quality backend for their clients.
+          Hey! I am <span className="font-bold text-[#cb4b16]">Sudhanshu</span>, currently working as a <span className="font-bold underline decoration-[#cb4b16] decoration-2 underline-offset-4">Backend Contract Developer</span>.
+        </p>
+        <p>
+          I have a strong background in distributed systems, API design, and infrastructure. Over the past few years, I have built <span className="bg-[#fdf6e3] border border-[#eee8d5] px-1.5 py-0.5 rounded font-mono text-sm text-[#586e75]">scalable microservices</span>, worked extensively with Go and Node.js, and managed complex database deployments.
+        </p>
+        <p>
+          I am deeply passionate about open-source and constantly looking for opportunities to build challenging backend architectures. What I really want to build next are robust data pipelines and low-latency systems.
         </p>
       </div>
     </div>

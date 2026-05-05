@@ -1,0 +1,1 @@
+import{j as e}from"./jsx-runtime.EKYJJIwR.js";function t(){return e.jsx("div",{className:"border-t border-neutral-800/90 w-full px-6 py-6 h-24 text-zinc-500",children:e.jsxs("footer",{className:"text-sm text-center text-gray-500 font-display",children:["© 2025 Sudhanshu Shekhar. All rights reserved.",e.jsx("br",{}),"Design inspired by ","AI","."]})})}export{t as default};
