@@ -4,7 +4,7 @@ function About() {
     <div className="md:w-[800px] mt-10 md:mt-16 mx-6 md:mx-0">
       <div className="text-[#333333] font-body md:text-lg text-base leading-relaxed flex flex-col gap-5 mb-16">
         <p>
-          Hey! I'm <span className="font-bold text-[#cb4b16]">Sudhanshu</span>a
+          Hey! I'm <span className="font-bold text-[#cb4b16]">Sudhanshu </span>a
           self-taught{" "}
           <span className="font-bold underline decoration-[#cb4b16] decoration-2 underline-offset-4">
             Backend & Infrastructure Engineer
