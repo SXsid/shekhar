@@ -1,26 +1,20 @@
-import GitHubCalendar from 'react-github-calendar';
-import React from 'react';
+import GitHubCalendar from "react-github-calendar";
+import React from "react";
 
 function Git() {
-    const gradientTheme = {
-        light: [
-            '#e8e4db', // empty paper
-            '#d1c7b7', // light tan
-            '#a99a86', // medium brown
-            '#786854', // dark brown
-            '#473a2b', // darkest ink
-        ],
-        dark: [
-            '#e6e6e6', // empty
-            '#cccccc',
-            '#999999',
-            '#666666',
-            '#333333', // full
-        ],
-    };
+  const gradientTheme = {
+    light: [
+      "transparent", // empty
+      "#c98a3d", // 1 contrib pops
+      "#b8742f",
+      "#9a5d22",
+      "#7a4318",
+    ],
 
+    dark: ["transparent", "#ffb347", "#d98c2b", "#a8651a", "#7a4318"],
+  };
   return (
-    <div className="overflow-x-auto px-2 md:px-0 mb-10 hidden md:block" >
+    <div className="overflow-x-auto px-2 md:px-0 mb-10 block">
       <div className="w-[fit-content] md:w-[800px] mx-auto">
         <GitHubCalendar
           username="SXsid"

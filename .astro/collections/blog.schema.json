@@ -17,6 +17,9 @@
           "type": "string",
           "default": "#2496ED"
         },
+        "image": {
+          "type": "string"
+        },
         "$schema": {
           "type": "string"
         }

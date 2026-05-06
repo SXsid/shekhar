@@ -5,26 +5,22 @@ import { skillData } from "@/lib/data";
 
 function SkillSection() {
   return (
-    <>
-      <div className=" flex-col md:w-[800px] hidden md:flex mt-10   ">
-        <Intro
-          title="Skills"
-          desc="Here are some of the skills I have acquired over the years of my journey in the tech industry. I am always looking to learn more and improve my skillset."
-        />
-        <div className="flex flex-col gap-4">
-          {skillData.map((skill, index) => (
-            <SkillType
-              key={index}
-              name={skill.name}
-              items={skill.items}
-              index={index}
-            />
-          ))}
-        </div>
+    <div className=" flex-col md:w-[800px] hidden md:flex mt-10   ">
+      <Intro
+        title="Skills"
+        desc="Here are some of the skills I have acquired over the years of my journey in the tech industry. I am always looking to learn more and improve my skillset."
+      />
+      <div className="flex flex-col gap-4">
+        {skillData.map((skill, index) => (
+          <SkillType
+            key={index}
+            name={skill.name}
+            items={skill.items}
+            index={index}
+          />
+        ))}
       </div>
-
-      <SkillforSmallScrren />
-    </>
+    </div>
   );
 }
 
@@ -50,23 +46,3 @@ function SkillType({ name, items, index }: ISkillCard & { index: number }) {
     </div>
   );
 }
-
-function SkillforSmallScrren() {
-  const data = ["Backend", "AI", "Cloud", "Frontend"];
-  return (
-    <div className=" flex-col  mt-6 mx-4 w-auto flex md:hidden  ">
-      <h3 className="font-display text-[#333333] font-semibold mb-2">What can i do </h3>
-      <div className="flex flex-wrap gap-3 ">
-        {data.map((value, i) => (
-          <span
-            key={i}
-            className="bg-white border text-neutral-600 font-medium text-md border-neutral-300 px-4 py-1 rounded-md shadow-sm"
-          >
-            {value}
-          </span>
-        ))}
-      </div>
-    </div>
-  );
-}
-

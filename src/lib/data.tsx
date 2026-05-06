@@ -225,11 +225,18 @@ export const ExpData: IExperienceCard[] = [
 export const skillData: ISkillCard[] = [
   {
     name: "Languages",
-    items: ["Typescript", "Go", "Python", "C", "Sql"],
+    items: ["Go", "Typescript", "Python", "C", "Sql"],
   },
   {
     name: "Backend",
-    items: ["Express.js", "FastApi", "net/http", "Langchain", "RAG"],
+    items: [
+      "Express.js",
+      "FastApi",
+      "net/http",
+      "Langchain",
+      "gRPC",
+      "ElasticSearch",
+    ],
   },
   {
     name: "Databases",
@@ -237,14 +244,14 @@ export const skillData: ISkillCard[] = [
   },
   {
     name: "DevOps & Cloud",
-    items: ["Docker", "AWS", "github-Aciton"],
+    items: ["Docker", "AWS", "CI/CD", "Grafana", "Prometheus"],
   },
   {
     name: "Frontend",
     items: ["React", "Next.js", "Tailwind CSS", "Redux", "Tanstack Query"],
   },
   {
-    name: "Others",
-    items: ["Git", "Prisma", "gRPC", "tRPC"],
+    name: "Tools",
+    items: ["Git", "Vim", "Claude"],
   },
 ];

@@ -7,6 +7,7 @@ const blogCollection = defineCollection({
     dateOfPublish: z.string(),
     topic: z.string().optional(),
     color: z.string().default("#2496ED"),
+    image: z.string().optional(),
   }),
 });
 

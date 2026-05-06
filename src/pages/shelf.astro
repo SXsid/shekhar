@@ -1,62 +1,60 @@
 ---
 import Layout from '../layouts/Layout.astro';
+import currentRead from '../data/current_read.json';
+import pastRead from '../data/past_read.json';
+
+const totalItems = currentRead.length + pastRead.length;
 ---
 
 <Layout>
-  <div class="w-full overflow-x-hidden px-8 md:px-0 min-h-screen">
-    <div class="relative flex flex-col items-center w-full min-h-screen pt-12 pb-24">
-      <div class="w-full max-w-[800px]">
-        <a href="/" class="text-[#586e75] hover:text-[#333333] mb-12 inline-block transition-colors font-mono text-sm">&larr; Back to Home</a>
-        
-        <div class="flex flex-col w-full">
-          <h1 class="text-3xl font-display font-bold text-[#333333] mb-8 pb-4 border-b-2 border-neutral-200">My Shelf<span class="text-[#586e75] font-normal">(0)</span></h1>
-        </div>
+  <div class="w-full overflow-x-hidden px-4 md:px-8 min-h-screen py-12 flex justify-center">
+    
+    <!-- The Book Page Container -->
+    <div class="w-full max-w-[750px] relative px-8 py-16 md:px-16 border border-[#e5e4df] rounded-sm bg-[#FAF9F6] shadow-sm">
+      
+      <a href="/" class="text-[#8c8c8c] hover:text-[#222] mb-12 inline-block transition-colors font-sans text-sm tracking-wide">&larr; Back to Home</a>
+      
+      <div class="mb-16">
+        <h1 class="text-4xl font-serif font-medium text-[#222] mb-2 tracking-tight">My Shelf</h1>
+        <p class="text-[#555] font-serif italic text-lg">A catalog of {totalItems} items I'm reading or have read.</p>
       </div>
+
+      <div class="font-serif text-[#222] text-lg leading-relaxed space-y-16">
+        <!-- Currently Reading Section -->
+        {currentRead.length > 0 && (
+          <div>
+            <h2 class="text-2xl mb-6 font-bold tracking-tight text-[#111] uppercase text-sm tracking-widest border-b border-[#e5e4df] pb-2">Currently Reading</h2>
+            <ul class="list-disc pl-5 space-y-3 marker:text-[#999]">
+              {currentRead.map((item) => (
+                <li class="pl-2">
+                  <a href={item.link} target="_blank" rel="noopener noreferrer" class="text-blue-600 hover:text-blue-800 transition-colors underline decoration-[#d4d4d4] underline-offset-4 hover:decoration-blue-600">
+                    {item.name}
+                  </a>
+                  {item.author && <span class="text-[#666] text-base ml-1">— {item.author}</span>}
+                </li>
+              ))}
+            </ul>
+          </div>
+        )}
+
+        <!-- Past Reads Section -->
+        {pastRead.length > 0 && (
+          <div>
+            <h2 class="text-2xl mb-6 font-bold tracking-tight text-[#111] uppercase text-sm tracking-widest border-b border-[#e5e4df] pb-2">Past Reads</h2>
+            <ul class="list-disc pl-5 space-y-3 marker:text-[#999]">
+              {pastRead.map((item) => (
+                <li class="pl-2">
+                  <a href={item.link} target="_blank" rel="noopener noreferrer" class="text-blue-600 hover:text-blue-800 transition-colors underline decoration-[#d4d4d4] underline-offset-4 hover:decoration-blue-600">
+                    {item.name}
+                  </a>
+                  {item.author && <span class="text-[#666] text-base ml-1">— {item.author}</span>}
+                </li>
+              ))}
+            </ul>
+          </div>
+        )}
+      </div>
+
     </div>
   </div>
-
 </Layout>
-          
-          <!-- <div class="mb-10"> -->
-          <!--   <h2 class="text-xl font-display font-bold text-[#333333] mb-3">Research work</h2> -->
-          <!--   <p class="text-[#333333] mb-4 text-sm leading-relaxed"> -->
-          <!--     I spend time on independent research, reading and sometimes implementing papers. My areas of interest include distributed systems, consensus algorithms, and backend architectures. -->
-          <!--   </p> -->
-          <!--   <ul class="list-disc pl-5 space-y-2"> -->
-          <!--     <li><a href="#" class="text-blue-600 hover:underline text-sm">Cold-RL: Learning Cache Eviction with Offline Reinforcement Learning for NGINX</a></li> -->
-p         <!--   </ul> -->
-          <!-- </div> -->
-          <!---->
-          <!-- <div class="mb-10"> -->
-          <!--   <h2 class="text-xl font-display font-bold text-[#333333] mb-3">Papers I read</h2> -->
-          <!--   <p class="text-[#333333] mb-4 text-sm leading-relaxed"> -->
-          <!--     I read one paper every week around various topics that interests me and here are some of them that I found amusing categorized by topics. -->
-          <!--   </p> -->
-          <!--   <ul class="list-disc pl-5 space-y-2"> -->
-          <!--     <li><a href="#" class="text-blue-600 hover:underline text-sm">Real-time Data Infrastructure at Uber</a></li> -->
-          <!--     <li><a href="#" class="text-blue-600 hover:underline text-sm">DeepSeekMath-V2: Towards Self-Verifiable Mathematical Reasoning</a></li> -->
-          <!--     <li><a href="#" class="text-blue-600 hover:underline text-sm">Lost in the Middle: How Language Models Use Long Contexts</a></li> -->
-          <!--     <li><a href="#" class="text-blue-600 hover:underline text-sm">Mesa: Geo-Replicated, Near Real-Time, Scalable Data Warehousing</a></li> -->
-          <!--     <li><a href="#" class="text-blue-600 hover:underline text-sm">Spanner: Google's Globally-Distributed Database</a></li> -->
-          <!--     <li><a href="#" class="text-blue-600 hover:underline text-sm">In Search of an Understandable Consensus Algorithm (Raft)</a></li> -->
-          <!--     <li><a href="#" class="text-blue-600 hover:underline text-sm">Dynamo: Amazon's Highly Available Key-value Store</a></li> -->
-          <!--   </ul> -->
-          <!-- </div> -->
-          <!---->
-          <!-- <div class="mb-10"> -->
-          <!--   <h2 class="text-xl font-display font-bold text-[#333333] mb-3">Books</h2> -->
-          <!--   <p class="text-[#333333] mb-4 text-sm leading-relaxed"> -->
-          <!--     The foundational books that have significantly shaped my engineering perspective. -->
-          <!--   </p> -->
-          <!--   <ul class="list-disc pl-5 space-y-2"> -->
-          <!--     <li><a href="#" class="text-blue-600 hover:underline text-sm">Designing Data-Intensive Applications</a></li> -->
-          <!--     <li><a href="#" class="text-blue-600 hover:underline text-sm">Clean Architecture: A Craftsman's Guide to Software Structure and Design</a></li> -->
-          <!--     <li><a href="#" class="text-blue-600 hover:underline text-sm">Site Reliability Engineering</a></li> -->
-          <!--   </ul> -->
-          <!-- </div> -->
-
-<!--         </div> -->
-<!--       </div> -->
-<!--     </div> -->
-<!--   </div> -->
-<!-- </Layout> -->

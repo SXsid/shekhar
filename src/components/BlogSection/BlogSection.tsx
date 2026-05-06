@@ -5,7 +5,7 @@ import Intro from "../Intro/Intro";
 
 function BlogSection() {
   return (
-    <div className="md:flex  hidden flex-col items-center mt-6">
+    <div className="flex flex-col items-center mt-6">
       <Intro
         title="Blogs"
         desc="A collection of my blogs where I share experiences and ideas on technology, programming languages, databases, cloud and frameworks"

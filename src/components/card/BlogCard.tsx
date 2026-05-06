@@ -19,7 +19,7 @@ function BlogCard({title, dateOfpublish, link, logo, color, topic}: IBlogCard) {
       viewport={{
         once: true,
       }}
-      className='bg-transparent border-b border-dashed border-neutral-300 hidden md:block w-[760px] rounded-none h-auto py-4 px-2 overflow-hidden hover:scale-[0.98] transition-transform duration-300'
+      className='bg-transparent border-b border-dashed border-neutral-300 w-full md:w-[760px] rounded-none h-auto py-4 px-2 overflow-hidden hover:scale-[0.98] transition-transform duration-300'
     >
       <a href={link} target="_blank" className="block w-full">
         <div className='flex items-center gap-4 w-full'>
