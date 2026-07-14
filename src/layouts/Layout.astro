@@ -1,9 +1,6 @@
 ---
 import { ClientRouter } from 'astro:transitions';
 import '@/styles/globals.css';
-import { Spotlight } from '@/components/Spotlight';
-import MusicPlayer from '@/components/MusicPlayer';
-// In a real app we might use @fontsource, but standard font links are fast and robust.
 ---
 
 <!doctype html>
@@ -11,21 +8,48 @@ import MusicPlayer from '@/components/MusicPlayer';
   <head>
     <meta charset="UTF-8" />
     <meta name="description" content="Backend-focused Full Stack Developer experienced in building scalable systems, APIs, and DevOps workflows." />
-    <meta name="viewport" content="width=device-width" />
-    <link rel="icon" type="image/x-icon" href="/favicon.ico" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="icon" type="image/x-icon" href="https://i.ibb.co/spWbbdZM/Screenshot-from-2025-12-23-03-19-13.png" />
     <meta name="generator" content={Astro.generator} />
-    <title>Shekhar - Backend & Infrastructure Engineer</title>
-    
-    <!-- Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;700&family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
-    
+    <title>Shekhar — Backend & Infrastructure Engineer</title>
+
+    <!-- Fonts: Inter for UI + JetBrains Mono for code -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,400;0,14..32,500;0,14..32,600;1,14..32,400&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+
+    <!--
+      Theme init — MUST run before first paint (no-flash).
+      Also wired to astro:after-swap so client-side navigation
+      never loses the .dark class.
+    -->
+    <script is:inline>
+      function __applyTheme() {
+        var saved = localStorage.getItem("theme") || "light";
+        var root  = document.documentElement;
+        if (saved === "dark") {
+          root.classList.add("dark");
+        } else if (saved === "system") {
+          root.classList.toggle(
+            "dark",
+            window.matchMedia("(prefers-color-scheme: dark)").matches
+          );
+        } else {
+          root.classList.remove("dark");
+        }
+      }
+
+      // Run immediately (before paint)
+      __applyTheme();
+
+      // Re-run after every Astro client-side navigation swap
+      // This is what fixes the "need to refresh" bug.
+      document.addEventListener("astro:after-swap", __applyTheme);
+    </script>
+
     <ClientRouter />
   </head>
-  <body class="antialiased text-[#333333]">
-    <Spotlight client:load />
-    <MusicPlayer client:only="react" />
+  <body class="antialiased">
     <slot />
   </body>
 </html>

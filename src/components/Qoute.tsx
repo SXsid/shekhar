@@ -1,65 +1,18 @@
 "use client";
-import React, { useEffect, useState } from "react";
+import React from "react";
 
-function Quote() {
-  const fullText = "NOT GIVING UP ,IS MY MAGIC";
-  const [currText, setCurrText] = useState("");
-  const [isTyping, setIsTyping] = useState(true);
-  const [index, setIndex] = useState(0);
-
-  useEffect(() => {
-    let typingInterval:NodeJS.Timeout;
-
-    if (isTyping) {
-      typingInterval = setInterval(() => {
-        if (index >= fullText.length) {
-          clearInterval(typingInterval);
-          setIsTyping(false);
-          setTimeout(() => {
-            setCurrText("");
-            setIndex(0);
-            setIsTyping(true);
-          }, 500); 
-        } else {
-          setCurrText(prev => prev + fullText[index]);
-          setIndex(prevIndex => prevIndex + 1);
-        }
-      }, 150);
-    }
-
-    return () => clearInterval(typingInterval);
-  }, [isTyping, index]);
-
+// Simple static quote — no typing animation, clean and readable
+export default function Quote() {
   return (
-   <div className="border border-dashed border-neutral-300 md:w-[800px] w-full md:h-[180px] h-[100px] mt-10 relative bg-white/40">
-    <div className="absolute top-4 left-4 z-10 w-4 h-4 bg-white rounded-full flex justify-center items-center shadow-sm">
-        <div className="bg-green-500 rounded-full w-1 h-1"></div>
+    <div
+      className="md:w-[800px] w-full mt-10 mb-4 px-4 md:px-0"
+    >
+      <p
+        className="text-center text-base md:text-lg font-display italic"
+        style={{ color: "var(--fg-muted)" }}
+      >
+        ❝ Not giving up is my magic. ❞
+      </p>
     </div>
-      <div className="absolute top-4 right-4 z-10 w-4 h-4 bg-white rounded-full flex justify-center items-center shadow-sm">
-        <div className="bg-green-500 rounded-full w-1 h-1"></div>
-    </div>
-      <div className="absolute bottom-4 left-4 z-10 w-4 h-4 bg-white rounded-full flex justify-center items-center shadow-sm">
-        <div className="bg-green-500 rounded-full w-1 h-1"></div>
-    </div>
-      <div className="absolute bottom-4 right-4 z-10 w-4 h-4 bg-white rounded-full flex justify-center items-center shadow-sm">
-        <div className="bg-green-500 rounded-full w-1 h-1"></div>
-    </div>
-      
-      {/* Border lines */}
-      <div className="absolute top-5 left-0 right-0 h-px bg-neutral-300"></div>
-      <div className="absolute bottom-5 left-0 right-0 h-px bg-neutral-300"></div>
-      <div className="absolute left-5 top-0 bottom-0 w-px bg-neutral-300"></div>
-      <div className="absolute right-5 top-0 bottom-0 w-px bg-neutral-300"></div>
-    
-     <div className=" w-full h-full  border-neutral-300/80 flex items-center justify-center">
-        <div className="md:text-2xl font-display text-[#333333] text-xs font-medium">
-    ❝
-      <span className="mx-2">{currText}</span>❞
-    
-    </div>
-        </div>
-   </div>
   );
 }
-
-export default Quote;

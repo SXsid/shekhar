@@ -229,26 +229,19 @@ export const skillData: ISkillCard[] = [
   },
   {
     name: "Backend",
-    items: [
-      "Express.js",
-      "FastApi",
-      "net/http",
-      "Langchain",
-      "gRPC",
-      "ElasticSearch",
-    ],
+    items: ["net/http", "Express.js", "FastApi", "Langchain", "gRPC"],
   },
   {
     name: "Databases",
     items: ["PostgreSQL", "Redis", "Firestore"],
   },
   {
-    name: "DevOps & Cloud",
+    name: "Infra",
     items: ["Docker", "AWS", "CI/CD", "Grafana", "Prometheus"],
   },
   {
     name: "Frontend",
-    items: ["React", "Next.js", "Tailwind CSS", "Redux", "Tanstack Query"],
+    items: ["React", "Tailwind CSS", "Redux"],
   },
   {
     name: "Tools",

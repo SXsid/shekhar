@@ -1,15 +1,16 @@
 [
   {
+    "name": "MicroGrad",
+    "desc": "A Go implementation of a scalar-valued autograd engine with an MLP built on top.",
+    "liveLink": "https://github.com/SXsid/micrograd-go/blob/main/README.md",
+    "gitHubLink": "https://github.com/SXsid/micrograd-go",
+    "isTopProject": false,
+    "techstack": ["go"]
+  },
+  {
     "name": "KitsuDB",
     "desc": "An in-memory cache database written in Go that implements the Redis RESP protocol, using an event-loop architecture for concurrency.",
     "gitHubLink": "https://github.com/SXsid/KitsuDB",
-    "isTopProject": true,
-    "techstack": ["go", "c"]
-  },
-  {
-    "name": "RootLessRaft",
-    "desc": "A naive implementation of a Docker-like container in go on linux.",
-    "gitHubLink": "https://github.com/SXsid/Rootless-Raft",
     "isTopProject": true,
     "techstack": ["go", "c"]
   },
@@ -48,7 +49,7 @@
     "name": "GOMON",
     "desc": "gomon – A minimal Go-powered nodemon alternative. Watches your files, rebuilds, and reruns your app on change.",
     "gitHubLink": "https://github.com/SXsid/gomon",
-    "isTopProject": false,
+    "isTopProject": true,
     "techstack": ["go"]
   },
   {

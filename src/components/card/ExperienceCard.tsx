@@ -1,6 +1,5 @@
 import React from "react";
 import { IExperienceCard } from "@/Types/type";
-import { motion } from "motion/react";
 
 function ExperienceCard({
   positionTitle,
@@ -8,39 +7,23 @@ function ExperienceCard({
   from,
   to,
   imageURL,
-  isFirst,
-  isLast,
   bgcolor,
 }: IExperienceCard & { isFirst: boolean; isLast: boolean }) {
   return (
-    <motion.div
-      initial={{
-        x: -30,
-        opacity: 0,
-        filter: "blur(3px)",
-      }}
-      whileInView={{
-        x: 0,
-        opacity: 1,
-        filter: "blur(0px)",
-      }}
-      viewport={{
-        once: true,
-      }}
-      className="flex py-4 pl-10 pr-2 sm:pl-12 relative"
-    >
-      <div className="flex  sm:flex-row w-full rounded-lg lg:px-4 py-4 ">
-        <div className=" lg:mr-4  mr-2 mb-3 sm:mb-0">
+    <div className="flex py-3 pl-10 pr-2 sm:pl-12 relative">
+      <div className="flex sm:flex-row w-full py-2">
+        {/* Logo */}
+        <div className="lg:mr-4 mr-2 mb-3 sm:mb-0">
           <div
-            className="w-12 h-12 rounded-full overflow-hidden"
+            className="w-10 h-10 rounded-full overflow-hidden flex-shrink-0"
             style={{ backgroundColor: bgcolor }}
           >
             {imageURL && (
               <img
                 src={imageURL}
-                alt={companyName ? companyName : "freelance"}
-                width={48}
-                height={48}
+                alt={companyName ?? "freelance"}
+                width={40}
+                height={40}
                 className="w-full h-full object-contain"
               />
             )}
@@ -48,23 +31,25 @@ function ExperienceCard({
         </div>
 
         {/* Content */}
-        <div className=" lg:flex lg:justify-between lg:w-[80%]">
+        <div className="lg:flex lg:justify-between lg:w-full">
           <div>
-            <h3 className="text-lg font-medium font-body text-[#333333]">{positionTitle}</h3>
-            <h4 className="text-md text-neutral-600 font-sans font-medium">
+            <h3 className="text-base font-medium" style={{ color: "var(--fg)" }}>
+              {positionTitle}
+            </h3>
+            <h4 className="text-sm" style={{ color: "var(--fg-muted)" }}>
               {companyName}
             </h4>
           </div>
-          <div className="text-sm hidden lg:block text-neutral-500 mt-1 font-mono">
-            <span>{from}</span>
-            <span className="mx-2">—</span>
-            <span>{to}</span>
+          <div
+            className="text-xs hidden lg:block mt-1 font-mono"
+            style={{ color: "var(--fg-muted)" }}
+          >
+            {from} — {to}
           </div>
         </div>
       </div>
-    </motion.div>
+    </div>
   );
 }
 
 export default ExperienceCard;
-

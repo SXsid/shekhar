@@ -18,11 +18,7 @@ import { useRef, useState } from "react";
 
 import { docData } from "@/lib/data";
 
-export const FloatingDock = ({
-  className,
-}: {
-  className?: string;
-}) => {
+export const FloatingDock = ({ className }: { className?: string }) => {
   const items = docData;
   let mouseX = useMotionValue(Infinity);
   return (
@@ -30,7 +26,7 @@ export const FloatingDock = ({
       onMouseMove={(e) => mouseX.set(e.pageX)}
       onMouseLeave={() => mouseX.set(Infinity)}
       className={cn(
-        "mx-auto flex h-16 lg:gap-4 gap-2 items-end rounded-2xl bg-transparent border border-neutral-800 px-4 pb-3 backdrop-blur-md",
+        "mx-auto flex h-16 lg:gap-3 gap-2 items-end rounded-xl bg-[var(--bg-card)] border border-[var(--border)] px-4 pb-3 backdrop-blur-sm",
         className,
       )}
     >
@@ -101,7 +97,7 @@ function IconContainer({
         style={{ width, height }}
         onMouseEnter={() => setHovered(true)}
         onMouseLeave={() => setHovered(false)}
-        className="aspect-square rounded-full bg-transparent flex items-center justify-center relative border border-neutral-800 text-[#333333] hover:bg-neutral-200 transition-colors shadow-sm"
+        className="aspect-square rounded-full bg-transparent flex items-center justify-center relative border border-[var(--border)] text-[var(--fg-muted)] hover:text-[var(--fg)] hover:bg-[var(--border)] transition-colors"
       >
         <AnimatePresence>
           {hovered && (
@@ -109,7 +105,7 @@ function IconContainer({
               initial={{ opacity: 0, y: 10, x: "-50%" }}
               animate={{ opacity: 1, y: 0, x: "-50%" }}
               exit={{ opacity: 0, y: 2, x: "-50%" }}
-              className="px-2 py-0.5 whitespace-pre rounded-md border bg-white border-neutral-200 text-[#333333] shadow-sm absolute left-1/2 -translate-x-1/2 -top-8 w-fit text-xs font-medium"
+              className="px-2 py-0.5 whitespace-pre rounded border bg-[var(--bg-card)] border-[var(--border)] text-[var(--fg)] shadow-sm absolute left-1/2 -translate-x-1/2 -top-8 w-fit text-xs font-medium"
             >
               {title}
             </motion.div>

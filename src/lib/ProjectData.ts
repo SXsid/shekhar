@@ -9,13 +9,7 @@ export const ProjectStaticData: IProjectCard[] = [
     Techstack: [TechstackData.go, TechstackData.c],
   },
   {
-    name: "RootLessRaft(working)",
-    desc: "A naive implementation of a Docker-like container in go on linux.",
-    gitHubLink: "https://github.com/SXsid/Rootless-Raft",
-    Techstack: [TechstackData.go, TechstackData.c],
-  },
-  {
-    name: "Mirrorly(working)",
+    name: "Mirrorly",
     desc: "Mirrorly is an extension that lets you see yourself in every outfit online. AI-powered virtual try-ons for your favorite stores.Resources",
     gitHubLink: "https://github.com/SXsid/Mirrorly",
     Techstack: [TechstackData.Javascript, TechstackData.python],

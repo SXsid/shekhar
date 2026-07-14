@@ -7,54 +7,103 @@ const totalItems = currentRead.length + pastRead.length;
 ---
 
 <Layout>
-  <div class="w-full overflow-x-hidden px-4 md:px-8 min-h-screen py-12 flex justify-center">
-    
-    <!-- The Book Page Container -->
-    <div class="w-full max-w-[750px] relative px-8 py-16 md:px-16 border border-[#e5e4df] rounded-sm bg-[#FAF9F6] shadow-sm">
-      
-      <a href="/" class="text-[#8c8c8c] hover:text-[#222] mb-12 inline-block transition-colors font-sans text-sm tracking-wide">&larr; Back to Home</a>
-      
-      <div class="mb-16">
-        <h1 class="text-4xl font-serif font-medium text-[#222] mb-2 tracking-tight">My Shelf</h1>
-        <p class="text-[#555] font-serif italic text-lg">A catalog of {totalItems} items I'm reading or have read.</p>
+  <div class="w-full px-5 md:px-8 min-h-screen py-10 flex justify-center">
+    <div class="w-full max-w-[640px]">
+
+      <a
+        href="/"
+        class="inline-block mb-10 text-xs tracking-wide transition-colors font-ui"
+        style="color: var(--fg-sub); font-family: 'Inter', sans-serif;"
+        onmouseover="this.style.color='var(--fg)'"
+        onmouseout="this.style.color='var(--fg-sub)'"
+      >
+        ← back
+      </a>
+
+      <div class="mb-10">
+        <h1 class="text-2xl font-semibold mb-1" style="color: var(--fg); font-family: ui-serif, Georgia, serif;">
+          My Shelf
+        </h1>
+        <p class="text-sm italic" style="color: var(--fg-muted); font-family: ui-serif, Georgia, serif;">
+          {totalItems} books I'm reading or have read.
+        </p>
       </div>
 
-      <div class="font-serif text-[#222] text-lg leading-relaxed space-y-16">
-        <!-- Currently Reading Section -->
+      <div class="space-y-10">
+
         {currentRead.length > 0 && (
-          <div>
-            <h2 class="text-2xl mb-6 font-bold tracking-tight text-[#111] uppercase text-sm tracking-widest border-b border-[#e5e4df] pb-2">Currently Reading</h2>
-            <ul class="list-disc pl-5 space-y-3 marker:text-[#999]">
+          <section>
+            <h2
+              class="text-xs mb-4 font-semibold uppercase tracking-widest pb-2"
+              style="color: var(--fg-sub); border-bottom: 1px solid var(--border); font-family: 'Inter', sans-serif;"
+            >
+              Currently Reading
+            </h2>
+            <ul class="space-y-3" style="list-style: none; padding: 0;">
               {currentRead.map((item) => (
-                <li class="pl-2">
-                  <a href={item.link} target="_blank" rel="noopener noreferrer" class="text-blue-600 hover:text-blue-800 transition-colors underline decoration-[#d4d4d4] underline-offset-4 hover:decoration-blue-600">
-                    {item.name}
-                  </a>
-                  {item.author && <span class="text-[#666] text-base ml-1">— {item.author}</span>}
+                <li class="flex items-baseline gap-2">
+                  <span style="color: var(--fg-sub); font-size: 0.75rem;">—</span>
+                  <div>
+                    <a
+                      href={item.link}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      class="transition-colors"
+                      style="color: var(--fg); text-decoration: underline; text-decoration-color: var(--border); text-underline-offset: 3px;"
+                      onmouseover="this.style.textDecorationColor='var(--accent)'; this.style.color='var(--accent)'"
+                      onmouseout="this.style.textDecorationColor='var(--border)'; this.style.color='var(--fg)'"
+                    >
+                      {item.name}
+                    </a>
+                    {item.author && (
+                      <span class="text-sm ml-2" style="color: var(--fg-sub);">
+                        {item.author}
+                      </span>
+                    )}
+                  </div>
                 </li>
               ))}
             </ul>
-          </div>
+          </section>
         )}
 
-        <!-- Past Reads Section -->
         {pastRead.length > 0 && (
-          <div>
-            <h2 class="text-2xl mb-6 font-bold tracking-tight text-[#111] uppercase text-sm tracking-widest border-b border-[#e5e4df] pb-2">Past Reads</h2>
-            <ul class="list-disc pl-5 space-y-3 marker:text-[#999]">
+          <section>
+            <h2
+              class="text-xs mb-4 font-semibold uppercase tracking-widest pb-2"
+              style="color: var(--fg-sub); border-bottom: 1px solid var(--border); font-family: 'Inter', sans-serif;"
+            >
+              Past Reads
+            </h2>
+            <ul class="space-y-3" style="list-style: none; padding: 0;">
               {pastRead.map((item) => (
-                <li class="pl-2">
-                  <a href={item.link} target="_blank" rel="noopener noreferrer" class="text-blue-600 hover:text-blue-800 transition-colors underline decoration-[#d4d4d4] underline-offset-4 hover:decoration-blue-600">
-                    {item.name}
-                  </a>
-                  {item.author && <span class="text-[#666] text-base ml-1">— {item.author}</span>}
+                <li class="flex items-baseline gap-2">
+                  <span style="color: var(--fg-sub); font-size: 0.75rem;">—</span>
+                  <div>
+                    <a
+                      href={item.link}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      class="transition-colors"
+                      style="color: var(--fg-muted); text-decoration: underline; text-decoration-color: var(--border); text-underline-offset: 3px;"
+                      onmouseover="this.style.color='var(--fg)'; this.style.textDecorationColor='var(--fg-muted)'"
+                      onmouseout="this.style.color='var(--fg-muted)'; this.style.textDecorationColor='var(--border)'"
+                    >
+                      {item.name}
+                    </a>
+                    {item.author && (
+                      <span class="text-sm ml-2" style="color: var(--fg-sub);">
+                        {item.author}
+                      </span>
+                    )}
+                  </div>
                 </li>
               ))}
             </ul>
-          </div>
+          </section>
         )}
-      </div>
 
+      </div>
     </div>
   </div>
 </Layout>

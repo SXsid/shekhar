@@ -1,11 +1,5 @@
 [
   {
-    "name": "Concurrency In Go",
-    "link": "https://www.amazon.in/Concurrency-Go-Tools-Techniques-Developers/dp/935213592X?source=ps-sl-shoppingads-lpcontext&ref_=fplfs&psc=1&smid=AP6IZ69K79O66",
-    "author": "Katherine Cox-Buday ",
-    "type": "Book"
-  },
-  {
     "name": "Clear Thinking",
     "link": "https://www.amazon.in/Clear-Thinking-Turning-Ordinary-Extraordinary/dp/1529915953/ref=sr_1_2?adgrpid=58112051039&hvadid=356460748931&hvdev=c&hvexpln=0&hvlocphy=9299328&hvnetw=g&hvocijid=2569275598478160476--&hvqmt=e&hvrand=2569275598478160476&hvtargid=kwd-302070302878&hydadcr=12622_1949910&mcid=e4d4470d01e0303b9b94d888453f3037&sr=8-2",
     "author": "Shane Parrish",

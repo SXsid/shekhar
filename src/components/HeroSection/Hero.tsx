@@ -4,88 +4,130 @@ import { FaXTwitter } from "react-icons/fa6";
 import { IoMailUnreadOutline } from "react-icons/io5";
 import { CiLinkedin } from "react-icons/ci";
 import { MdOutlineLocationOn } from "react-icons/md";
+import ThemeToggle from "@/components/ThemeToggle";
 
-function Hero() {
+/* ── Mobile view: name + compact icon row ─────────────── */
+function MobileHero() {
   return (
-    <div className="md:w-[800px] m-12 md:mx-0 h-auto flex md:mb-16 mb-10 md:mt-28 mt-16 md:p-8 p-4 md:gap-6 gap-4 z-10 items-center relative border border-dashed border-neutral-300 bg-white/40">
-      <div className="absolute top-[-8px] left-[-8px] z-10 w-4 h-4 bg-white border border-neutral-300 rounded-full flex justify-center items-center shadow-sm">
-        <div className="bg-orange-500 rounded-full w-1 h-1"></div>
-      </div>
-      <div className="absolute top-[-8px] right-[-8px] z-10 w-4 h-4 bg-white border border-neutral-300 rounded-full flex justify-center items-center shadow-sm">
-        <div className="bg-orange-500 rounded-full w-1 h-1"></div>
-      </div>
-      <div className="absolute bottom-[-8px] left-[-8px] z-10 w-4 h-4 bg-white border border-neutral-300 rounded-full flex justify-center items-center shadow-sm">
-        <div className="bg-orange-500 rounded-full w-1 h-1"></div>
-      </div>
-      <div className="absolute bottom-[-8px] right-[-8px] z-10 w-4 h-4 bg-white border border-neutral-300 rounded-full flex justify-center items-center shadow-sm">
-        <div className="bg-orange-500 rounded-full w-1 h-1"></div>
-      </div>
-      <div className=" left-6 md:w-24 md:h-24 w-16 h-16">
-        <img
-          src={
-            "https://i.ibb.co/spWbbdZM/Screenshot-from-2025-12-23-03-19-13.png"
-          }
-          width={120}
-          height={120}
-          alt="myImage"
-          className="rounded-xl border-2 border-neutral-800 object-cover"
-        />
+    <div className="flex md:hidden flex-col pt-8 pb-2 px-2 w-full">
+      {/* Name + role */}
+      <div className="mb-4">
+        <h1 className="text-base font-semibold leading-tight" style={{ color: "var(--fg)" }}>
+          Sudhanshu Shekhar
+        </h1>
+        <p className="text-xs mt-0.5" style={{ color: "var(--fg-muted)" }}>
+          Backend &amp; Infrastructure Engineer · Delhi, India
+        </p>
       </div>
 
-      <div className="flex justify-between flex-1  text-md ">
-        <div className="flex flex-col md:gap-4 gap-2 items-start">
-          <h1 className="md:text-xl text-md font-display font-semibold text-[#333333]">
-            Sudhanshu Shekhar
-          </h1>
-          <div className="flex gap-2 items-center text-neutral-600 ">
-            <MdOutlineLocationOn className="text-neutral-500  " />
-            <p className="text-neutral-600">Delhi, India</p>
-          </div>
-
-          <div className="flex gap-2 items-center text-neutral-600 cursor-pointer group">
-            <IoMailUnreadOutline className="text-neutral-500  group-hover:text-[#333333]" />
-            <a
-              href={"mailto:contact.sidshekhar@gmail.com"}
-              className="group-hover:text-[#333333] transition-colors"
-            >
-              contact.sidshekhar@gmail.com
-            </a>
-          </div>
-
-          <div className="flex gap-2 items-center text-neutral-600 group cursor-pointer">
-            <CiLinkedin className="text-neutral-500 group-hover:text-[#333333]" />
-            <a
-              href={"https://www.linkedin.com/in/shekharsid/"}
-              target="_blank"
-              className="group-hover:text-[#333333] transition-colors"
-            >
-              shekharsid
-            </a>
-          </div>
-          <h4 className="text-neutral-700 font-medium font-sans text-md mt-2">
-            Backend and Infrastructure guy
-          </h4>
-        </div>
-
-        <div className=" gap-4 h-fit hidden md:flex">
-          <a
-            target="_blank"
-            href="https://github.com/SXsid"
-            className="w-10 h-10 flex justify-center items-center bg-white border border-neutral-300 text-neutral-700 rounded-md hover:bg-neutral-100 hover:text-black transition-colors shadow-sm"
-          >
-            <FaGithub size={18} />
-          </a>
-          <a
-            target="_blank"
-            href="https://x.com/shekharTwts"
-            className="w-10 h-10 flex justify-center items-center bg-white border border-neutral-300 text-neutral-700 rounded-md hover:bg-neutral-100 hover:text-black transition-colors shadow-sm"
-          >
-            <FaXTwitter size={16} />
-          </a>
+      {/* Icon links row */}
+      <div className="flex items-center gap-3" style={{ color: "var(--fg-muted)" }}>
+        <a href="https://github.com/SXsid" target="_blank" aria-label="GitHub"
+          className="transition-colors hover:opacity-100 opacity-70"
+          style={{ color: "var(--fg-muted)" }}
+          onMouseEnter={e => (e.currentTarget.style.color = "var(--fg)")}
+          onMouseLeave={e => (e.currentTarget.style.color = "var(--fg-muted)")}
+        >
+          <FaGithub size={17} />
+        </a>
+        <a href="https://x.com/shekharTwts" target="_blank" aria-label="Twitter"
+          className="transition-colors"
+          style={{ color: "var(--fg-muted)" }}
+          onMouseEnter={e => (e.currentTarget.style.color = "var(--fg)")}
+          onMouseLeave={e => (e.currentTarget.style.color = "var(--fg-muted)")}
+        >
+          <FaXTwitter size={16} />
+        </a>
+        <a href="https://www.linkedin.com/in/shekharsid/" target="_blank" aria-label="LinkedIn"
+          className="transition-colors"
+          style={{ color: "var(--fg-muted)" }}
+          onMouseEnter={e => (e.currentTarget.style.color = "var(--fg)")}
+          onMouseLeave={e => (e.currentTarget.style.color = "var(--fg-muted)")}
+        >
+          <CiLinkedin size={19} />
+        </a>
+        <a href="mailto:contact.sidshekhar@gmail.com" aria-label="Email"
+          className="transition-colors"
+          style={{ color: "var(--fg-muted)" }}
+          onMouseEnter={e => (e.currentTarget.style.color = "var(--fg)")}
+          onMouseLeave={e => (e.currentTarget.style.color = "var(--fg-muted)")}
+        >
+          <IoMailUnreadOutline size={18} />
+        </a>
+        <div className="ml-auto">
+          <ThemeToggle />
         </div>
       </div>
     </div>
   );
 }
 
-export default Hero;
+/* ── Desktop hero card ─────────────────────────────────── */
+function DesktopHero() {
+  return (
+    <div className="hidden md:flex md:w-[800px] mt-24 mb-8 items-center gap-5">
+      {/* Avatar */}
+      <img
+        src="https://i.ibb.co/spWbbdZM/Screenshot-from-2025-12-23-03-19-13.png"
+        width={64}
+        height={64}
+        alt="Sudhanshu Shekhar"
+        className="rounded-lg object-cover flex-shrink-0"
+        style={{ border: "1px solid var(--border)" }}
+      />
+
+      {/* Info */}
+      <div className="flex flex-col gap-1 flex-1">
+        <h1 className="text-base font-semibold leading-tight" style={{ color: "var(--fg)" }}>
+          Sudhanshu Shekhar
+        </h1>
+        <p className="text-xs" style={{ color: "var(--fg-muted)" }}>
+          Backend &amp; Infrastructure Engineer
+        </p>
+        <div className="flex items-center gap-1 text-xs mt-0.5" style={{ color: "var(--fg-muted)" }}>
+          <MdOutlineLocationOn size={12} />
+          <span>Delhi, India</span>
+          <span className="mx-1" style={{ opacity: 0.3 }}>·</span>
+          <a
+            href="mailto:contact.sidshekhar@gmail.com"
+            className="transition-colors"
+            onMouseEnter={e => (e.currentTarget.style.color = "var(--fg)")}
+            onMouseLeave={e => (e.currentTarget.style.color = "var(--fg-muted)")}
+          >
+            contact.sidshekhar@gmail.com
+          </a>
+        </div>
+      </div>
+
+      {/* Actions */}
+      <div className="flex items-center gap-2">
+        <a
+          target="_blank"
+          href="https://github.com/SXsid"
+          aria-label="GitHub"
+          className="icon-btn"
+        >
+          <FaGithub size={14} />
+        </a>
+        <a
+          target="_blank"
+          href="https://x.com/shekharTwts"
+          aria-label="Twitter / X"
+          className="icon-btn"
+        >
+          <FaXTwitter size={13} />
+        </a>
+        <ThemeToggle />
+      </div>
+    </div>
+  );
+}
+
+export default function Hero() {
+  return (
+    <>
+      <MobileHero />
+      <DesktopHero />
+    </>
+  );
+}

@@ -14,21 +14,44 @@ const { Content } = await entry.render();
 ---
 
 <Layout>
-  <div class="w-full overflow-x-hidden px-8 md:px-0">
-    <div class="relative flex flex-col items-center w-full min-h-screen pt-24 pb-24">
-      <div class="w-full max-w-[800px] prose prose-invert prose-p:text-neutral-600 prose-headings:text-[#333333]">
-        <a href="/blogs" class="text-neutral-500 hover:text-[#333333] mb-8 inline-block transition-colors no-underline">&larr; Back to Blogs</a>
-        
-        <h1 class="text-4xl font-bold mb-4">{entry.data.title}</h1>
-        <div class="flex gap-4 text-sm text-neutral-500 mb-8">
+  <div class="w-full overflow-x-hidden px-4 md:px-0">
+    <div class="relative flex flex-col items-center w-full min-h-screen pt-12 pb-28">
+      <div class="w-full max-w-[720px]">
+
+        <a
+          href="/blogs"
+          class="inline-block mb-8 text-xs font-mono transition-colors"
+          style="color: var(--fg-muted);"
+          onmouseover="this.style.color='var(--fg)'"
+          onmouseout="this.style.color='var(--fg-muted)'"
+        >
+          &larr; all posts
+        </a>
+
+        <h1 class="text-2xl font-semibold mb-2 leading-snug" style="color: var(--fg);">
+          {entry.data.title}
+        </h1>
+
+        <div class="flex gap-3 text-xs font-mono mb-8" style="color: var(--fg-muted);">
           <span>{entry.data.dateOfPublish}</span>
-          <span>&bull;</span>
+          <span style="opacity: 0.4;">·</span>
           <span>{entry.data.topic}</span>
         </div>
-        <img src={entry.data.image} alt={entry.data.title} />
-        <article class="mt-8 markdown-body text-neutral-800 leading-relaxed space-y-4 text-lg">
+
+        {entry.data.image && (
+          <img
+            src={entry.data.image}
+            alt={entry.data.title}
+            class="w-full rounded-lg mb-8"
+            style="border: 1px solid var(--border);"
+          />
+        )}
+
+        <!-- prose-theme is defined in globals.css and uses CSS vars -->
+        <article class="prose-theme text-base leading-relaxed space-y-4">
           <Content />
         </article>
+
       </div>
     </div>
   </div>

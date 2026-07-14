@@ -1,55 +1,128 @@
 ---
-title: "how does a Linux container run on your Windows machine?"
+title: "How Does a Linux Container Run on Your Windows Machine?"
 dateOfPublish: "06 May 2026"
 topic: "Docker"
 color: "#2496ED"
 image: "https://miro.medium.com/0*pN4fvf9VLBMy11nu.jpg"
 ---
 
-Ever wonder how Linux-based images can run on your Windows machine, even though the OS dependencies are Linux, and by container architecture, a Linux-based image should run on a Linux host to share the OS with similar images?
+> Ever wonder how Linux-based images can run on your Windows machine, even though the OS dependencies are Linux, and by container architecture, a Linux-based image should run on a Linux host to share the OS with similar images?
 
-## the "runs everywhere" promise
+---
 
-Docker says build once, run anywhere.
+# The "Runs Everywhere" Promise
+
+Docker says:
+
+> **Build once. Run anywhere.**
 
 And it works.
 
-You pull a Linux image on your Windows machine, run `docker run`, and the thing just runs.
+You pull a Linux image on your Windows machine,
+
+```bash
+docker run nginx
+```
+
+and the thing just runs.
 
 But there is a quiet detail nobody talks about.
 
-Linux containers depend on Linux kernel features, cgroups and namespaces, to work.
+---
 
-So they need a Linux kernel to run. Not prefer. <u>Need.</u>
+## Linux Containers Need a Linux Kernel
 
-That means "runs everywhere" really means runs everywhere <u>a Linux kernel is available.</u>
+Linux containers depend on Linux kernel features like **cgroups** and **namespaces** to work.
 
-On a Linux host, your container talks directly to the kernel. Zero tricks.
+So they need a Linux kernel to run.
 
-On Windows? There is no Linux kernel. So Docker has to bring one.
+Not prefer.
 
-## what Docker actually does on Windows
+**Need.**
 
-To achieve this, Docker uses lightweight VMs like <u>WSL 2</u> or <u>LinuxKit</u>, as the Windows kernel is incompatible with Linux-based containers.
+That means Docker's promise is really:
 
-The VM is highly optimized, so it is not a problem like the overhead we face while running traditional virtual machines directly.
+> **Runs everywhere a Linux kernel is available.**
 
-The VM bridges networking, file sharing, and resource management to integrate seamlessly with the Windows host.
+On a Linux host, your container talks directly to the kernel.
 
-Your container is not running on Windows.
+**Zero tricks.**
 
-It is running <u>inside a Linux VM that runs on Windows.</u>
+On Windows?
 
-The VM provides the Linux kernel. The container borrows from it. Windows is just the host.
+There is no Linux kernel.
 
-## what about Windows containers?
+So Docker has to bring one.
 
-For Windows containers, Docker directly uses the Windows kernel without needing a VM.
+---
 
-But those images only work on Windows. They do not run everywhere.
+# What Docker Actually Does on Windows
 
-Almost every image you will pull, nginx, postgres, redis, node, is Linux-based.
+Docker uses a lightweight Linux VM through **WSL 2** (or **LinuxKit** on older systems).
 
-So 99% of the time, the Linux VM is what is doing the actual work.
+Unlike traditional virtual machines, this VM is highly optimized, so the overhead is minimal.
 
-This setup ensures efficient performance and compatibility for both Linux and Windows-based containers.
+It also bridges:
+
+- Networking
+- File sharing
+- Resource management
+
+so everything feels native.
+
+---
+
+## Where Is Your Container Actually Running?
+
+Your container is **not running on Windows.**
+
+It is running:
+
+> **Inside a Linux VM that runs on Windows.**
+
+```text
+Windows
+│
+└── WSL 2 / Linux VM
+      │
+      ├── Linux Kernel
+      ├── Docker Engine
+      └── Containers
+```
+
+The VM provides the Linux kernel.
+
+The container borrows from it.
+
+Windows is simply the host.
+
+---
+
+# What About Windows Containers?
+
+Windows containers are different.
+
+They use the **Windows kernel directly**, so no Linux VM is needed.
+
+The downside is that they only run on Windows.
+
+Almost every image you'll pull—**nginx**, **postgres**, **redis**, **node**—is Linux-based.
+
+So **99% of the time**, the Linux VM is doing the real work.
+
+---
+
+## TL;DR
+
+Docker Desktop doesn't magically make Windows understand Linux containers.
+
+It quietly starts a lightweight Linux VM, and **that's where your Linux containers are actually running.**
+
+---
+
+## References
+
+- https://docs.docker.com/desktop/
+- https://docs.docker.com/desktop/features/wsl/
+- https://learn.microsoft.com/windows/wsl/
+- https://github.com/linuxkit/linuxkit
