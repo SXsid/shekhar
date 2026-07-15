@@ -19,7 +19,7 @@ function useInView(threshold = 0.15) {
           obs.disconnect();
         }
       },
-      { threshold }
+      { threshold },
     );
     obs.observe(el);
     return () => obs.disconnect();
@@ -165,7 +165,10 @@ function TimelineEntry({
             ) : (
               <span
                 className="text-xs font-bold"
-                style={{ color: "var(--fg-sub)", fontFamily: "'Inter', sans-serif" }}
+                style={{
+                  color: "var(--fg-sub)",
+                  fontFamily: "'Inter', sans-serif",
+                }}
               >
                 {exp.companyName?.charAt(0)}
               </span>
@@ -182,7 +185,7 @@ function TimelineEntry({
 
           {/* Date — right side, hidden on tiny screens */}
           <span
-            className="code-badge hidden xs:inline-block"
+            className="code-badge hidden xl:inline-block"
             style={{ fontSize: "0.68rem", flexShrink: 0 }}
           >
             {exp.from} — {exp.to}
@@ -193,14 +196,17 @@ function TimelineEntry({
         <div className="mt-1.5 flex items-center flex-wrap gap-2 pl-[44px]">
           <span
             className="text-xs"
-            style={{ color: "var(--fg-muted)", fontFamily: "'Inter', sans-serif" }}
+            style={{
+              color: "var(--fg-muted)",
+              fontFamily: "'Inter', sans-serif",
+            }}
           >
             {exp.positionTitle}
           </span>
 
           {/* Date shown inline on mobile (small screens) */}
           <span
-            className="code-badge xs:hidden"
+            className="code-badge xl:hidden"
             style={{ fontSize: "0.68rem" }}
           >
             {exp.from} — {exp.to}
@@ -210,3 +216,4 @@ function TimelineEntry({
     </div>
   );
 }
+
