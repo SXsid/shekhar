@@ -1,36 +1,34 @@
 ---
 import Layout from '../layouts/Layout.astro';
-import About from "@/components/AboutSection/About";
 import Git from "@/components/GithhubSection/Git";
 import Hero from "@/components/HeroSection/Hero";
 import Qoute from "@/components/Qoute";
 import ExpSection from "@/components/ExpSection/ExpSection";
-import Nav from "@/components/AboutSection/Nav";
 import { FloatingDock } from "@/components/FloatingDoc";
 import Footer from "@/components/footer/Footer";
 ---
 
 <Layout>
-  <div class="w-full overflow-x-hidden px-4 md:px-0">
+  <div class="w-full overflow-x-hidden px-3 md:px-0">
     <div class="relative flex flex-col items-center w-full">
 
-      <!-- Main content — pb-20 keeps dock from overlapping last item -->
-      <div class="flex flex-col gap-0 items-center pb-20 w-full max-w-[1024px]">
+      <!-- Main content — pb-24 keeps dock from overlapping last item -->
+      <div class="flex flex-col gap-0 items-center pb-24 w-full max-w-[1024px]">
         <Hero client:load />
-        <About client:load />
-        <Nav client:load />
+        <div class="w-full md:w-[800px] mt-6">
+          <ExpSection client:load />
+        </div>
         <Git client:only="react" />
-        <ExpSection client:load />
         <Qoute client:load />
       </div>
 
-      <!-- Footer sits naturally in document flow -->
+      <!-- Footer -->
       <div class="w-full">
         <Footer client:load />
       </div>
 
-      <!-- FloatingDock: fixed, centred, just above the very bottom -->
-      <div class="fixed bottom-11 left-0 right-0 flex justify-center z-50 pointer-events-none">
+      <!-- Tab-bar dock: fixed, centred bottom -->
+      <div class="fixed bottom-5 left-0 right-0 flex justify-center z-50 pointer-events-none">
         <div class="pointer-events-auto">
           <FloatingDock client:load />
         </div>
