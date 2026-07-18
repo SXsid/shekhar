@@ -2,13 +2,20 @@
 import { IBlogCard } from "@/Types/type";
 import React from "react";
 
-function BlogCard({ title, dateOfpublish, link, logo, color, topic }: IBlogCard) {
+function BlogCard({
+  title,
+  dateOfpublish,
+  link,
+  logo,
+  color,
+  topic,
+}: IBlogCard) {
   return (
     <div
       className="w-full md:w-[760px] py-4 px-2 transition-colors"
       style={{ borderBottom: "1px solid var(--border)" }}
     >
-      <a href={link} target="_blank" className="block w-full group">
+      <a href={link} target="" className="block w-full group">
         <div className="flex items-center gap-4 w-full">
           {logo && (
             <div
@@ -37,7 +44,10 @@ function BlogCard({ title, dateOfpublish, link, logo, color, topic }: IBlogCard)
                 {topic}
               </span>
             </div>
-            <p className="font-mono text-xs mt-1.5" style={{ color: "var(--fg-muted)" }}>
+            <p
+              className="font-mono text-xs mt-1.5"
+              style={{ color: "var(--fg-muted)" }}
+            >
               {dateOfpublish}
             </p>
           </div>
@@ -48,3 +58,4 @@ function BlogCard({ title, dateOfpublish, link, logo, color, topic }: IBlogCard)
 }
 
 export default BlogCard;
+
