@@ -1,1 +1,0 @@
-<a style="display:flex;align-items:center;" href="https://ibb.co/3mrHyLxd"><img src="https://i.ibb.co/5hMVWfQ4/Screenshot-from-2025-10-14-17-28-20.png" alt="Screenshot-from-2025-10-14-17-28-20" border="0"></a>
