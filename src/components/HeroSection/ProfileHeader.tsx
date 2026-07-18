@@ -5,9 +5,24 @@ import { HiOutlineExternalLink } from "react-icons/hi";
 
 export default function ProfileHeader() {
   return (
-    <div style={{ display: "flex", alignItems: "flex-start", justifyContent: "space-between", gap: "12px", flexWrap: "wrap" }}>
+    <div
+      style={{
+        display: "flex",
+        alignItems: "flex-start",
+        justifyContent: "space-between",
+        gap: "12px",
+        flexWrap: "wrap",
+      }}
+    >
       <div>
-        <div style={{ display: "flex", alignItems: "center", gap: "8px", flexWrap: "wrap" }}>
+        <div
+          style={{
+            display: "flex",
+            alignItems: "center",
+            gap: "8px",
+            flexWrap: "wrap",
+          }}
+        >
           <h1
             style={{
               color: "var(--fg)",
@@ -20,8 +35,14 @@ export default function ProfileHeader() {
           >
             Sudhanshu Shekhar
           </h1>
-          <span style={{ color: "var(--fg-sub)", fontFamily: "'Inter', sans-serif", fontSize: "0.82rem" }}>
-            @sidshekhar
+          <span
+            style={{
+              color: "var(--fg-sub)",
+              fontFamily: "'Inter', sans-serif",
+              fontSize: "0.82rem",
+            }}
+          >
+            @shekhar1
           </span>
         </div>
         <p
@@ -42,7 +63,9 @@ export default function ProfileHeader() {
 
       {/* Resume Link */}
       <a
-        href="#"
+        href="https://drive.google.com/file/d/1-2RTgSbCdBbvi_DN1Th3vFzoe09qv9Oo/view?usp=sharing"
+        target="_blank"
+
         style={{
           display: "inline-flex",
           alignItems: "center",

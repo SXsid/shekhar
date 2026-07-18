@@ -7,7 +7,7 @@ export default function HeroBanner() {
     <div
       style={{
         position: "relative",
-        height: "clamp(160px, 26vw, 220px)",
+        height: "clamp(200px, 30vw, 270px)",
         borderRadius: "16px",
         overflow: "hidden",
         border: "1px solid var(--border)",

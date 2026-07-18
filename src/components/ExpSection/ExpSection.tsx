@@ -33,7 +33,7 @@ function useInView(threshold = 0.15) {
 ───────────────────────────────────────────────────────── */
 export default function ExpSection() {
   return (
-    <div className="w-full md:w-[800px] px-4 md:px-0 mt-4 mb-10">
+    <div className="w-full mt-4">
       {/* Section header */}
       <div
         className="mb-6 pb-2"
@@ -137,7 +137,7 @@ function TimelineEntry({
         onMouseLeave={() => setHovered(false)}
         style={{
           background: hovered ? "var(--bg-card)" : "transparent",
-          border: `1px solid ${hovered ? "var(--border)" : "transparent"}`,
+          // border: `1px solid ${hovered ? "var(--border)" : "transparent"}`,
           borderRadius: "8px",
           padding: "0.7rem 0.9rem",
           transition: "background 0.18s ease, border-color 0.18s ease",
@@ -145,7 +145,7 @@ function TimelineEntry({
         }}
       >
         {/* Row 1: logo + company + date */}
-        <div className="flex items-center gap-3">
+        <div className="flex items-center gap-3 ">
           {/* Logo */}
           <div
             className="flex-shrink-0 w-8 h-8 rounded overflow-hidden flex items-center justify-center"
@@ -216,4 +216,3 @@ function TimelineEntry({
     </div>
   );
 }
-

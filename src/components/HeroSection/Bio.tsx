@@ -12,13 +12,6 @@ export default function Bio() {
         fontFamily: "ui-serif, Georgia, serif",
         fontSize: "0.9rem",
       }}
-    >
-      Self-taught{" "}
-      <span style={{ color: "var(--fg)", fontWeight: 600 }}>
-        Backend &amp; Infrastructure Engineer
-      </span>{" "}
-      — I build systems that stay up, ship tools people actually use, and care
-      about reliability, observability, and clean code.
-    </p>
+    ></p>
   );
 }

@@ -8,15 +8,15 @@ function Git() {
   };
 
   return (
-    <div className="overflow-x-auto px-4 md:px-0 mb-10 block w-full">
-      <div className="w-fit md:w-[800px] mx-auto">
+    <div className="overflow-x-auto block w-full">
+      <div className="w-fit mx-auto" style={{ maxWidth: "100%" }}>
         <GitHubCalendar
           username="SXsid"
           theme={theme}
-          blockSize={11}
+          blockSize={10}
           blockMargin={3}
-          fontSize={14}
-          blockRadius={3}
+          fontSize={13}
+          blockRadius={2}
           colorScheme="light"
         />
       </div>
