@@ -12,6 +12,9 @@ export default function Bio() {
         fontFamily: "ui-serif, Georgia, serif",
         fontSize: "0.9rem",
       }}
-    ></p>
+    >
+      I build things that scale, code that's maintainable, and Product that make
+      my life and maybe yours — a bit better
+    </p>
   );
 }

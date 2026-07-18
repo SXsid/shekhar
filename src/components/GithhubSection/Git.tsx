@@ -8,8 +8,8 @@ function Git() {
   };
 
   return (
-    <div className="overflow-x-auto block w-full">
-      <div className="w-fit mx-auto" style={{ maxWidth: "100%" }}>
+    <div className="w-full overflow-x-auto" style={{ WebkitOverflowScrolling: "touch" }}>
+      <div className="w-fit min-w-[720px] mx-auto py-2">
         <GitHubCalendar
           username="SXsid"
           theme={theme}
