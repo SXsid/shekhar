@@ -1,6 +1,7 @@
 ---
 import { ClientRouter } from 'astro:transitions';
 import '@/styles/globals.css';
+import { FloatingDock } from '@/components/FloatingDoc';
 ---
 
 <!doctype html>
@@ -51,5 +52,11 @@ import '@/styles/globals.css';
   </head>
   <body class="antialiased">
     <slot />
+      <!-- Floating Dock menu -->
+      <div class="fixed bottom-10 left-0 right-0 flex justify-center z-50 pointer-events-none">
+        <div class="pointer-events-auto">
+          <FloatingDock client:load />
+        </div>
+      </div>
   </body>
 </html>
