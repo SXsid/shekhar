@@ -63,7 +63,7 @@ export default function ProfileHeader() {
 
       {/* Resume Link */}
       <a
-        href="https://drive.google.com/file/d/1-2RTgSbCdBbvi_DN1Th3vFzoe09qv9Oo/view?usp=sharing"
+        href="https://drive.google.com/file/d/1sDMrImOeutKXVr8l_0N6hdnFgN3oPO9z/view?usp=sharing"
         target="_blank"
 
         style={{
